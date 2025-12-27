@@ -1,0 +1,398 @@
+{
+  "NAV_ROUTE_LINKS": {
+    "DASHBOARD": "Eazyhomz",
+    "INTERIOR": "Interior",
+    "ARCHITECTURE":"Architecture",
+    "LANDSCAPE":"Landscape",
+    "BIM_Solution":"BIM Solution",
+    "FULL_HOME_INTERIOR":"Full Home Interior",
+    "JOIN_US":"Join Us",
+    "DESIGN_IDEAS": "Design Ideas",
+    "LIVING_AREA": "Living Area",
+    "KITCHEN": "Kitchen",
+    "BEDROOM": "Bedroom",
+    "BATHROOM": "Bathroom",
+    "FURNITURE_BY_EASYHOMEZ": "Emodular",
+    "BEDROOM_IDEAS": "Bedroom Design",
+    "KITCHEN_IDEAS": "Kitchen Design",
+    "BATHROOM_IDEAS": "Bathroom Design",
+    "KIDS_ROOM_DESIGN": "Kids Room Design",
+    "STUDY_ROOM_DESIGN": "Study Room Design",
+    "TV_UNIT_DESIGN": "TV Unit Design",
+    "WARDROBE_DESIGN": "Wardrobe Design",
+    "E_MODULAR":"Emodular"
+  },
+  "FOOTER_DATA": {
+    "ABOUT": "About",
+    "ADDRESS": "Address",
+    "SIGNUP": "Sign Up",
+    "SUBSCRIBE": "Subscribe to get all latest updates",
+    "FOLLOW": "Follow Us",
+    "BUTTON_TEXT": "Subscribe"
+  },
+  "GLOBAL_FORM_DATA": {
+    "MEET_A_DESIGNER": "Meet a designer",
+    "TALK_TO_A_DESIGNER": "Talk to a designer",
+    "BOOK_A_FREE_DESIGN_SESSION": "Book a free design session",
+    "PLACEHOLDER_NAME": "Enter your name",
+    "PLACEHOLDER_EMAIL": "Enter your email",
+    "PLACEHOLDER_PHONE": "Enter your mobile number",
+    "PLACEHOLDER_CITY": "Enter your current city",
+    "PLACEHOLDER_WHATSAPP": "You can reach me on WhatsApp",
+    "BUTTON_TEXT": "Book Design Session - FREE",
+    "FOOTER_DATA_1": "By submitting this form, you agree to the",
+    "FOOTER_DATA_2": "privacy policy",
+    "FOOTER_DATA_3": "and",
+    "FOOTER_DATA_4": "terms of use"
+  },
+  "DASHBOARD_DATA": {
+    "HERO_SECTION": {
+      "HEADING1": "Dream",
+      "HEADING2": "Design",
+      "HEADING3": "Build"
+    },
+    "WHY_US": {
+      "HEADING": "Why Eazyhomz",
+      "WHY_US_CARD_DATA": [
+        {
+          "id": "1",
+          "logoPath": "/assets/images/globe_icon.png",
+          "text": "Global Presence"
+        },
+        {
+          "id": "2",
+          "logoPath": "/assets/images/why-us-2.png",
+          "text": "Transparent Price"
+        },
+        {
+          "id": "3",
+          "logoPath": "/assets/images/why-us-3.png",
+          "text": "Personalised Design"
+        },
+        {
+          "id": "4",
+          "logoPath": "/assets/images/why-us-4.png",
+          "text": "Flat 5 Year Warranty*"
+        },
+        {
+          "id": "5",
+          "logoPath": "/assets/images/why-us-5.png",
+          "text": "No Hidden Cost"
+        }
+      ]
+    },
+    "HOME_DESIGN_DATA": {
+      "HEADING": "Home Design Made Eazy",
+      "SUB_HEADING": [
+        "At Eazyhomz, we specialize in delivering exceptional Architecture, Interior, and Landscape Design services to clients across the globe. Our team of expert designers and architects brings a unique blend of creativity, functionality, and innovation to every project, ensuring that your vision becomes a reality.",
+        "Whether it's designing a stunning architectural masterpiece, creating an inspiring and functional interior, or crafting beautiful outdoor landscapes, we are committed to making home and space design easy and accessible."
+      ],
+      "BUTTON_TEXT": "Book a free design session"
+    },
+    "INTERIOR_NEEDS": {
+      "HEADING": "One stop solution for all your home design needs​",
+      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver a seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior, or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence.",
+      "CARD_SLIDER_DATA": [
+        {
+          "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-1.jpg",
+          "HEADING": "Architecture Design",
+          "SUB_HEADING": "Design that transform spaces and bring your vision to life",
+          "BUTTON_TEXT": "View More"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-2.jpg",
+          "HEADING": "Interior Design",
+          "SUB_HEADING": "Design that makes your house a home",
+          "BUTTON_TEXT": "View More"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-3.jpg",
+          "HEADING": "Landscape Design",
+          "SUB_HEADING": "Design that enhance your outdoor spaces",
+          "BUTTON_TEXT": "View More"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-4.jpg",
+          "HEADING": "Emodular",
+          "SUB_HEADING": "Design furniture which suits your needs",
+          "BUTTON_TEXT": "View More"
+        }
+      ]
+    },
+    "DESIGN_INSPIRATION": {
+      "HEADING": "Home design inspiration​",
+      "SUB_HEADING": "From bold architectural structures to serene, functional interiors and breath-taking landscapes, our designs are tailored to create spaces that inspire, elevate, and transform. Let your vision come to life with Eazyhomz, where every detail is crafted to perfection, making your space a true reflection of your lifestyle.",
+      "IMAGE_SLIDER_DATA_1": {
+        "IMAGE_PATHS": [
+          "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%202.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%203.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%204.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%205.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%206.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%207.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%208.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%209.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2010.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2011.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2012.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2013.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2014.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "Architecture Design"
+      },
+      "IMAGE_SLIDER_DATA_2": {
+        "IMAGE_PATHS": [
+          "/assets/images/kitchen/Kitchen%20Design%201.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%202.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%203.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%204.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%205.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%206.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%207.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%208.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%209.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2010.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2011.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2012.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2013.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2014.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "Interior Design"
+      },
+      "IMAGE_SLIDER_DATA_3": {
+        "IMAGE_PATHS": [
+          "/assets/images/bedroom/Bedroom%20Design%201.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%202.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%203.jpeg",
+          "/assets/images/bedroom/Bedroom%20Design%204.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%205.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%206.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%207.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%208.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%209.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2010.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2011.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2012.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2013.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2014.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "Landscape Design"
+      },
+      "IMAGE_SLIDER_DATA_4": {
+        "IMAGE_PATHS": [
+          "/assets/images/bathroom/Bathroom%20Design%201.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%202.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%203.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%204.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%205.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%206.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%207.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%208.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%209.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2010.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2011.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2012.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2013.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2014.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "BIM Solution"
+      },
+      "IMAGE_SLIDER_DATA_5": {
+        "IMAGE_PATHS": [
+          "/assets/images/wardrobe/Wardrobe%20Design%201.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%202.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%203.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%204.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%205.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%206.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%207.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%208.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%209.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2010.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2011.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2012.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2013.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2014.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "Emodular"
+      },
+      "IMAGE_SLIDER_DATA_6": {
+        "IMAGE_PATHS": [
+          "/assets/images/img1.jpg",
+          "/assets/images/img2.jpg",
+          "/assets/images/img3.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "Emodular"
+      }
+    },
+    "ESTIMATION_SECTION": {
+      "HEADING": "Get an estimate for your Project​",
+      "SUB_HEADING": "Calculate the approximate cost of doing up your project.",
+      "ESTIMATION_DATA": [
+        {
+          "id": "1",
+          "heading": "Architecture Design",
+          "logoPath": "/assets/images/interior1.png",
+          "text": "Get an estimate for Architecture Design project",
+          "buttonText": "Get Free Estimation"
+        },
+        {
+          "id": "2",
+          "heading": "Interior Design",
+          "logoPath": "/assets/images/interior2.png",
+          "text": "Get estimate for your Interior Design project",
+          "buttonText": "Get Free Estimation"
+        },
+        {
+          "id": "3",
+          "heading": "Landscape Design",
+          "logoPath": "/assets/images/interior3.png",
+          "text": "Get estimate for your Landscape Design project",
+          "buttonText": "Get Free Estimation"
+        },
+        {
+          "id": "4",
+          "heading": "Emodular",
+          "logoPath": "/assets/images/interior4.png",
+          "text": "Get an estimate for Furniture Design & Installation work",
+          "buttonText": "Get Free Estimation"
+        }
+      ]
+    },
+    "STEPS_SECTION": {
+      "HEADING": "Home Design in Eazy Steps",
+      "SUB_HEADING": "We believe that every great project begins with a dream. Our mission is to take that dream and design spaces that inspire and elevate the way you live, work, and play. With a global reach, Eazyhomz is your partner in transforming ideas into beautifully designed, perfectly executed spaces. Let us help you create the perfect space, anywhere in the world. At Eazyhomz, home design is made eazy.",
+      "STEP_CARDS": [
+        {
+          "id": "1",
+          "image": "/assets/images/step-1.jpg",
+          "heading": "Dream",
+          "subHeading": "Get in touch with our design experts & tell us your design requirements"
+        },
+        {
+          "id": "2",
+          "image": "/assets/images/step-2.png",
+          "heading": "Design",
+          "subHeading": "Our experts will give you best design solution as per your need & budget."
+        },
+        {
+          "id": "3",
+          "image": "/assets/images/step-3.png",
+          "heading": "Build",
+          "subHeading": "Transition seamlessly into your new space with our hassle-free services."
+        }
+      ]
+    }
+  },
+  "BEDROOM_DATA": {
+    "HEADING": "Bedroom Interior Designs",
+    "SUB_HEADING": "Bedroom interior design holds a significant role in shaping our personal sanctuaries, and at Eazyhomz, we deeply understand its importance in fostering rest, relaxation, and rejuvenation. At Eazyhomz, we understand the importance of bedroom interior design. That’s why we’re dedicated to creating bedrooms that are not only beautiful and functional but also luxurious sanctuaries where you can unwind, recharge, and indulge in the comforts of home. Welcome to Eazyhomz, where every bedroom is a masterpiece of comfort and style.",
+    "CARD_TEXT": "Bedroom Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "LIVING_AREA_DATA": {
+    "HEADING": "Living Area Interior Design",
+    "SUB_HEADING": "At Eazyhomz, we understand the profound significance of living area interior design. Your living space is more than just four walls and a roof; it’s the heart of your home, the backdrop for your everyday life, and the canvas on which memories are made. That’s why we’re passionate about creating living areas that not only look stunning but also enhance your quality of life in countless ways.We’re dedicated to helping you realize the full potential of your living area, transforming it into a sanctuary where you can thrive and create lasting memories for years to come.",
+    "CARD_TEXT": "Living Room Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "KITCHEN_DATA": {
+    "HEADING": "Kitchen Interior Design",
+    "SUB_HEADING": "Kitchen interior design is a cornerstone of home living, and at Eazyhomz, we recognize its paramount importance in shaping not just the aesthetics, but the functionality and atmosphere of your home.At Eazyhomz, we believe that the kitchen is more than just a room, it’s a place where life happens. That’s why we’re dedicated to creating kitchen interiors that not only look beautiful but also enrich the lives of our clients in countless ways. Welcome to Eazyhomz, where every kitchen tells a story of love, laughter, and delicious moments shared.",
+    "CARD_TEXT": "Kitchen Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "BATHROOM_DATA": {
+    "HEADING": "Bathroom Interior Design",
+    "SUB_HEADING": "Bathroom interior design is a fundamental aspect of home comfort and luxury, and at Eazyhomz, we recognize its pivotal role in enhancing daily life. At Eazyhomz, we understand the importance of bathroom interior design in elevating your quality of life and enhancing your home environment. That’s why we’re dedicated to creating bathrooms that are not only beautiful and functional but also luxurious sanctuaries where you can unwind, rejuvenate, and pamper yourself in style. Welcome to Eazyhomz, where every bathroom is a masterpiece of comfort and sophistication.",
+    "CARD_TEXT": "Bathroom Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "KIDS_ROOM_DATA": {
+    "HEADING": "Kids Room Interior Design",
+    "SUB_HEADING": "Kid’s room interior design is crucial for creating a nurturing, inspiring, and safe environment where children can thrive and grow. At Eazyhomz, we understand the importance of kids’ room interior design in shaping the early years of childhood. That’s why we’re dedicated to creating spaces that inspire, nurture, and empower children to dream big and reach for the stars. Welcome to Eazyhomz, where every kids’ room is a magical world waiting to be explored.",
+    "CARD_TEXT": "Kids Room Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "STUDY_ROOM_DATA": {
+    "HEADING": "Study Room Interior Design",
+    "SUB_HEADING": "At Eazyhomz, we understand the importance of study room interior design in creating conducive environments for learning, creativity, and personal growth. That’s why we’re dedicated to creating study rooms that are not only functional and efficient but also inspiring and uplifting. Welcome to Eazyhomz, where every study room is a masterpiece of productivity and creativity.",
+    "CARD_TEXT": "Study Room Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "TV_UNIT_DATA": {
+    "HEADING": "TV Unit Design",
+    "SUB_HEADING": "At Eazyhomz, we understand the importance of TV unit design in creating functional and stylish living spaces. With our expertise and commitment to quality craftsmanship, we’re dedicated to designing TV units that exceed your expectations and enhance your home entertainment experience. Welcome to Eazyhomz, where every TV unit is a masterpiece of design and functionality.",
+    "CARD_TEXT": "TV Unit Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "WARDROBE_DATA": {
+    "HEADING": "Wardrobe Interior Design",
+    "SUB_HEADING": "At Eazyhomz, we understand the importance of wardrobe design in creating functional and beautiful storage solutions for your home. With our expertise and dedication to quality craftsmanship, we’re committed to creating wardrobes that exceed your expectations and enhance your daily life. Welcome to Eazyhomz, where every wardrobe is a masterpiece of organization and style.",
+    "CARD_TEXT": "Wardrobe Design {{number}}",
+    "BUTTON_TEXT": "Know More"
+  },
+  "DESIGN_IDEAS_DATA": {
+    "HEADING": "Design Ideas",
+    "SUB_HEADING": "If you’re on the lookout for simple home interior designs, then Welcome to Eazyhomz, where every design is a masterpiece of productivity and creativity.",
+    "CARD_TEXT": "{{text_to_replace}} Design",
+    "BUTTON_TEXT": "Know More"
+  },
+  "INTERIOR_DATA": {
+    "HEADING": "Interior Design",
+    "SUB_HEADING": "If you’re on the lookout for simple home interior designs, then Welcome to Eazyhomz, where every design is a masterpiece of productivity and creativity.",
+    "CARD_TEXT": "{{text_to_replace}} Design",
+    "BUTTON_TEXT": "Know More"
+  },
+  "BATHROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "Bathroom Design",
+    "SUB_HEADING": "Elevating everyday routines with luxurious and functional bathroom interior designs that marry elegance and practicality seamlessly."
+  },
+  "BEDROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "Bedroom Design",
+    "SUB_HEADING": "Creating serene sanctuaries with personalized bedroom interior designs that blend comfort, style, and sophistication effortlessly."
+  },
+  "KITCHEN_DESIGN_DETAILS_DATA": {
+    "HEADING": "Kitchen Design",
+    "SUB_HEADING": "Transforming kitchens into stylish and functional spaces where culinary creativity flourishes and family bonds are nourished."
+  },
+  "LIVING_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "Living Room Design",
+    "SUB_HEADING": "Redefining living spaces with tailored interior designs that harmonize comfort, style, and functionality for memorable moments and vibrant gatherings."
+  },
+  "KIDS_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "Kids Room Design",
+    "SUB_HEADING": "Sparking imagination and fostering growth with playful and practical kids room interior designs tailored to inspire creativity."
+  },
+  "STUDY_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "Study Room Design",
+    "SUB_HEADING": "Inspiring productivity with tailored study room interiors designed for focused learning and creative expression"
+  },
+  "TV_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "TV Unit Design",
+    "SUB_HEADING": "Elevating entertainment spaces with sleek and functional TV unit designs, seamlessly blending style and technology."
+  },
+  "WARDROBE_DESIGN_DETAILS_DATA": {
+    "HEADING": "Wardrobe Design",
+    "SUB_HEADING": "Redefining wardrobe design for seamless organization and personalized elegance in every space."
+  },
+  "BOOK_FREE_SESSIONS": "Book Free Design Session",
+  "GET_FREE_ESTIMATE": "Get Free Estimate",
+
+  "GLOBAL_KEYWORDS": {
+    "BEDROOM": "Bedroom",
+    "BATHROOM": "Bathroom",
+    "KITCHEN": "Kitchen",
+    "LIVING_AREA": "Living Area",
+    "KIDS_ROOM": "Kids Room",
+    "STUDY_ROOM": "Study Room",
+    "TV_UNIT": "TV Unit",
+    "WARDROBE": "Wardrobe"
+  }
+}

@@ -1,0 +1,282 @@
+.container {
+  height: auto;
+  width: 100%;
+  background-color: #07141d;
+  color: white;
+  padding: 10px 60px;
+
+  .logo {
+    height: 70px;
+    display: flex;
+    color: white;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    .heading11{
+      display: flex;
+      height: 100%;
+      align-items: end;
+      justify-content: end;
+      h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+        height: 100px;
+        line-height: 140px;
+      }
+    }
+    
+    img {
+      object-fit: cover;
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 10rem 3rem 1rem;
+    gap: 2rem;
+
+    .about {
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .aboutItem {
+        h2 {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+      }
+
+      .itemContainer {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    .address {
+      .addressItem {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h3 {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+
+        .add {
+          display: flex;
+          gap: 1rem;
+          color: white;
+          margin-top: 1rem;
+
+          .mobile {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .location {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .signUp {
+
+      input {
+        background: #fff;
+
+        &::placeholder {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #000;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      p {
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      span {
+        color: orangered;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .button {
+        background-color: #e52b16;
+        color: #FFFFFF;
+        font-size: 1rem;
+        border-radius: 0px;
+        margin-top: 1.2rem;
+        padding: 0.5rem;
+        font-weight: 500;
+        text-transform: none;
+      }
+
+      .followUs {
+        margin-top: 3rem;
+      }
+
+      img {
+        transition: .3s all ease;
+        margin-top: 0.8rem;
+
+        &:hover {
+          background-color: #e52b16;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .content {
+      width: 100%;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1rem;
+      gap: 2rem;
+
+      .about {
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        .aboutItem {
+          h2 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+        }
+
+        .itemContainer {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+
+      .address {
+        .addressItem {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+
+          .add {
+            display: flex;
+            gap: 1rem;
+            color: white;
+            margin-top: 1rem;
+
+            .mobile {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .location {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+
+      .signUp {
+        width: 100%;
+
+        input {
+          background: #fff;
+
+          &::placeholder {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        p {
+          margin-top: 1.2rem;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        span {
+          color: orangered;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .button {
+          background-color: #e52b16;
+          color: #FFFFFF;
+          font-size: 1rem;
+          border-radius: 0px;
+          margin-top: 1.2rem;
+          padding: 0.5rem;
+          font-weight: 500;
+          text-transform: none;
+        }
+
+        .followUs {
+          margin-top: 3rem;
+        }
+
+        img {
+          transition: .3s all ease;
+          margin-top: 0.8rem;
+
+          &:hover {
+            background-color: #e52b16;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px 30px;
+  }
+}

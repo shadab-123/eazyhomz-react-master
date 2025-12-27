@@ -1,0 +1,389 @@
+{
+  "NAV_ROUTE_LINKS": {
+    "DASHBOARD": "إيزيهومز",
+    "INTERIOR": "داخلي",
+    "ARCHITECTURE": "الهندسة المعمارية",
+    "LANDSCAPE": "المناظر الطبيعية",
+    "BIM_Solution": "حلول BIM",
+    "JOIN_US": "انضم إلينا",
+    "FULL_HOME_INTERIOR": "ديكور داخلي كامل للمنزل",
+    "DESIGN_IDEAS": "أفكار التصميم",
+    "LIVING_AREA": "منطقة المعيشة",
+    "KITCHEN": "المطبخ",
+    "BEDROOM": "غرفة النوم",
+    "BATHROOM": "الحمام",
+    "FURNITURE_BY_EASYHOMEZ": "الأثاث من إيزيهومز",
+    "BEDROOM_IDEAS": "تصميم غرفة النوم",
+    "KITCHEN_IDEAS": "تصميم المطبخ",
+    "BATHROOM_IDEAS": "تصميم الحمام",
+    "KIDS_ROOM_DESIGN": "تصميم غرفة الأطفال",
+    "STUDY_ROOM_DESIGN": "تصميم غرفة الدراسة",
+    "TV_UNIT_DESIGN": "تصميم وحدة التلفاز",
+    "WARDROBE_DESIGN": "تصميم خزانة الملابس",
+    "E_MODULAR":"موديولار إلكتروني"
+  },
+  "FOOTER_DATA": {
+    "ABOUT": "حول",
+    "ADDRESS": "العنوان",
+    "SIGNUP": "سجل",
+    "SUBSCRIBE": "اشترك للحصول على آخر التحديثات",
+    "FOLLOW": "تابعنا",
+    "BUTTON_TEXT": "اشترك"
+  },
+  "GLOBAL_FORM_DATA": {
+    "MEET_A_DESIGNER": "قابل المصمم",
+    "TALK_TO_A_DESIGNER": "تحدث إلى مصمم",
+    "BOOK_A_FREE_DESIGN_SESSION": "احجز جلسة تصميم مجانية",
+    "PLACEHOLDER_NAME": "أدخل اسمك",
+    "PLACEHOLDER_EMAIL": "أدخل بريدك الإلكتروني",
+    "PLACEHOLDER_PHONE": "أدخل رقم هاتفك المحمول",
+    "PLACEHOLDER_CITY": "أدخل الرمز البريدي لمكان إقامتك الحالي",
+    "PLACEHOLDER_WHATSAPP": "يمكنك الوصول إليّ عبر WhatsApp",
+    "BUTTON_TEXT": "احجز جلسة تصميم ثلاثي الأبعاد - مجاناً",
+    "FOOTER_DATA_1": "بتقديمك لهذا النموذج، فإنك توافق على",
+    "FOOTER_DATA_2": "سياسة الخصوصية",
+    "FOOTER_DATA_3": "و",
+    "FOOTER_DATA_4": "شروط الاستخدام"
+  },
+
+  "DASHBOARD_DATA": {
+    "HERO_SECTION": {
+      "HEADING1": "حلم",
+      "HEADING2": "تصميم",
+      "HEADING3": "بناء"
+    },
+    "WHY_US": {
+      "HEADING": "لماذا إيزيهومز",
+      "WHY_US_CARD_DATA": [
+        {
+          "id": "1",
+          "logoPath": "/assets/images/globe_icon.svg",
+          "text": "التواجد العالمي"
+        },
+        {
+          "id": "2",
+          "logoPath": "/assets/images/why-us-2.png",
+          "text": "سعر شفاف"
+        },
+        {
+          "id": "3",
+          "logoPath": "/assets/images/why-us-3.png",
+          "text": "تصميم مخصص"
+        },
+        {
+          "id": "4",
+          "logoPath": "/assets/images/why-us-4.png",
+          "text": "ضمان لمدة 5 سنوات*"
+        },
+        {
+          "id": "5",
+          "logoPath": "/assets/images/why-us-5.png",
+          "text": "لا تكاليف خفية"
+        }
+      ]
+    },
+    "HOME_DESIGN_DATA": {
+      "HEADING": "تصميم المنزل بسهولة",
+      "SUB_HEADING": "في Eazyhomz، نحن متخصصون في تقديم خدمات استثنائية في التصميم المعماري، الداخلي، وتصميم المناظر الطبيعية للعملاء في جميع أنحاء العالم. يجلب فريقنا من المصممين والمهندسين المعماريين الخبراء مزيجًا فريدًا من الإبداع، والوظائف، والابتكار لكل مشروع، مما يضمن تحقيق رؤيتك إلى واقع. سواء كان تصميم تحفة معمارية مذهلة، أو إنشاء تصميم داخلي ملهم وعملي، أو تصميم مناظر طبيعية جميلة، فإننا ملتزمون بجعل تصميم المنزل والمساحات سهلًا ومتاحًا للجميع.",
+      "BUTTON_TEXT": "احجز استشارة مجانية"
+    },
+    "INTERIOR_NEEDS": {
+      "HEADING": "حل شامل لجميع احتياجاتك الداخلية",
+      "SUB_HEADING": "وجهتك الكاملة لتصميم وتجديد داخلي استثنائي. مع فريقنا من المصممين والمعماريين والحرفيين الخبراء، نقدم عملية سلسة من المفهوم إلى الإنجاز. سواء كنت تبحث عن تحديث حديث أو تحول كامل، نحن هنا لتحقيق رؤيتك.",
+      "CARD_SLIDER_DATA": [
+        {
+          "IMAGE_PATH": "/assets/images/img1.jpg",
+          "HEADING": "حلول معيارية",
+          "SUB_HEADING": "خزانة المطبخ والتخزين الخدمي",
+          "BUTTON_TEXT": "عرض المزيد"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/img1.jpg",
+          "HEADING": "حلول معيارية",
+          "SUB_HEADING": "خزانة المطبخ والتخزين الخدمي",
+          "BUTTON_TEXT": "عرض المزيد"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/img1.jpg",
+          "HEADING": "حلول معيارية",
+          "SUB_HEADING": "خزانة المطبخ والتخزين الخدمي",
+          "BUTTON_TEXT": "عرض المزيد"
+        },
+        {
+          "IMAGE_PATH": "/assets/images/img1.jpg",
+          "HEADING": "حلول معيارية",
+          "SUB_HEADING": "خزانة المطبخ والتخزين الخدمي",
+          "BUTTON_TEXT": "عرض المزيد"
+        }
+      ]
+    },
+    "DESIGN_INSPIRATION": {
+      "HEADING": "إلهام تصميم المنزل",
+      "SUB_HEADING": "ارفع مستوى مساحتك بأناقة خالدة وذوق حديث من خلال مفاهيم التصميم الداخلي الملهِمة لدينا.",
+      "IMAGE_SLIDER_DATA_1": {
+        "IMAGE_PATHS": [
+          "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%202.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%203.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%204.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%205.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%206.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%207.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%208.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%209.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2010.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2011.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2012.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2013.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2014.jpg",
+          "/assets/images/living%20room/Living%20Room%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "غرفة المعيشة"
+      },
+      "IMAGE_SLIDER_DATA_2": {
+        "IMAGE_PATHS": [
+          "/assets/images/kitchen/Kitchen%20Design%201.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%202.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%203.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%204.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%205.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%206.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%207.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%208.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%209.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2010.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2011.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2012.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2013.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2014.jpg",
+          "/assets/images/kitchen/Kitchen%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "المطبخ"
+      },
+      "IMAGE_SLIDER_DATA_3": {
+        "IMAGE_PATHS": [
+          "/assets/images/bedroom/Bedroom%20Design%201.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%202.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%203.jpeg",
+          "/assets/images/bedroom/Bedroom%20Design%204.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%205.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%206.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%207.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%208.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%209.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2010.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2011.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2012.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2013.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2014.jpg",
+          "/assets/images/bedroom/Bedroom%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "غرفة النوم"
+      },
+      "IMAGE_SLIDER_DATA_4": {
+        "IMAGE_PATHS": [
+          "/assets/images/bathroom/Bathroom%20Design%201.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%202.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%203.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%204.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%205.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%206.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%207.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%208.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%209.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2010.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2011.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2012.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2013.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2014.jpg",
+          "/assets/images/bathroom/Bathroom%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "الحمام"
+      },
+      "IMAGE_SLIDER_DATA_5": {
+        "IMAGE_PATHS": [
+          "/assets/images/wardrobe/Wardrobe%20Design%201.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%202.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%203.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%204.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%205.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%206.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%207.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%208.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%209.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2010.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2011.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2012.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2013.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2014.jpg",
+          "/assets/images/wardrobe/Wardrobe%20Design%2015.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "خزانة الملابس"
+      },
+      "IMAGE_SLIDER_DATA_6": {
+        "IMAGE_PATHS": [
+          "/assets/images/img1.jpg",
+          "/assets/images/img2.jpg",
+          "/assets/images/img3.jpg"
+        ],
+        "IMAGE_SLIDER_HEADING": "أثاث من إيزيهومز"
+      }
+    },
+    "ESTIMATION_SECTION": {
+      "HEADING": "احصل على تقدير لمنزلك",
+      "SUB_HEADING": "احسب التكلفة التقريبية لتجهيز منزلك الداخلي.",
+      "ESTIMATION_DATA": [
+        {
+          "id": "1",
+          "heading": "تصميم داخلي للمنزل بالكامل",
+          "logoPath": "/assets/images/interior1.png",
+          "text": "احصل على تقدير لتصميمك الداخلي الكامل للمنزل",
+          "buttonText": "احصل على تقدير مجاني"
+        },
+        {
+          "id": "2",
+          "heading": "المطبخ",
+          "logoPath": "/assets/images/interior2.png",
+          "text": "احصل على تقدير لتصميمك الداخلي الكامل للمطبخ",
+          "buttonText": "احصل على تقدير مجاني"
+        },
+        {
+          "id": "3",
+          "heading": "الحمام",
+          "logoPath": "/assets/images/interior3.png",
+          "text": "احصل على تقدير لتصميمك الداخلي الكامل للحمام",
+          "buttonText": "احصل على تقدير مجاني"
+        },
+        {
+          "id": "4",
+          "heading": "خزانة الملابس",
+          "logoPath": "/assets/images/interior4.png",
+          "text": "احصل على تقدير لتصميمك الداخلي الكامل لخزانة الملابس",
+          "buttonText": "احصل على تقدير مجاني"
+        }
+      ]
+    },
+    "STEPS_SECTION": {
+      "HEADING": "تصميم داخلي للمنزل بسهولة",
+      "STEP_CARDS": [
+        {
+          "id": "1",
+          "image": "/assets/images/step-1.jpg",
+          "heading": "حلم",
+          "subHeading": "تواصل مع خبرائنا في التصميم وأخبرنا بمتطلبات تصميمك"
+        },
+        {
+          "id": "2",
+          "image": "/assets/images/step-2.png",
+          "heading": "تصميم",
+          "subHeading": "سيقدم لك خبراؤنا أفضل حلول التصميم حسب احتياجاتك وميزانيتك."
+        },
+        {
+          "id": "3",
+          "image": "/assets/images/step-3.png",
+          "heading": "بناء",
+          "subHeading": "انتقل بسلاسة إلى مساحتك الجديدة مع خدماتنا السلسة."
+        }
+      ]
+    }
+  },
+
+  "BEDROOM_DATA": {
+    "HEADING": "تصاميم داخلية لغرف النوم",
+    "SUB_HEADING": "تصميم الديكور الداخلي للغرف النوم يلعب دوراً هاماً في تشكيل ملاذاتنا الشخصية، وفي Eazyhomz نُدرك تماماً أهمية هذا الأمر في تعزيز الراحة والاسترخاء والتجديد. لذلك، نحن ملتزمون بإنشاء غرف نوم ليست فقط جميلة وعملية، بل أيضاً فاخرة، حيث يمكنك الاسترخاء وإعادة شحن طاقتك والتمتع بملذات المنزل. مرحباً بكم في Eazyhomz، حيث كل غرفة نوم هي تحفة من الراحة والأناقة",
+    "CARD_TEXT": "تصميم غرفة نوم {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "LIVING_AREA_DATA": {
+    "HEADING": "تصميم الديكور الداخلي لمنطقة المعيشة",
+    "SUB_HEADING": "في إيزيهومز، نفهم الأهمية الكبيرة لتصميم الديكور الداخلي لمنطقة المعيشة. مساحة المعيشة الخاصة بك هي أكثر من مجرد أربعة جدران وسقف؛ إنها قلب منزلك، الخلفية لحياتك اليومية، واللوحة التي تُصنع عليها الذكريات. لهذا السبب نحن شغوفون بخلق مساحات معيشية لا تبدو فقط رائعة ولكنها تعزز أيضًا جودة حياتك بطرق لا تعد ولا تحصى. نحن ملتزمون بمساعدتك على تحقيق الإمكانيات الكاملة لمساحة المعيشة الخاصة بك، وتحويلها إلى ملاذ يمكنك أن تزدهر فيه وتخلق ذكريات دائمة لسنوات قادمة.",
+    "CARD_TEXT": "تصميم غرفة المعيشة {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "KITCHEN_DATA": {
+    "HEADING": "تصميم الديكور الداخلي للمطبخ",
+    "SUB_HEADING": "يعد تصميم الديكور الداخلي للمطبخ حجر الزاوية في الحياة المنزلية، وفي إيزيهومز ندرك أهميته الكبرى في تشكيل ليس فقط الجماليات، بل أيضًا الوظيفة والأجواء في منزلك. في إيزيهومز، نؤمن أن المطبخ أكثر من مجرد غرفة، إنه مكان تحدث فيه الحياة. لهذا السبب نحن ملتزمون بإنشاء ديكورات داخلية للمطابخ لا تبدو فقط جميلة ولكنها تغني حياة عملائنا بطرق لا حصر لها. مرحبًا بكم في إيزيهومز، حيث يروي كل مطبخ قصة من الحب، والضحك، ولحظات لذيذة مشتركة.",
+    "CARD_TEXT": "تصميم المطبخ {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "BATHROOM_DATA": {
+    "HEADING": "تصميم الديكور الداخلي للحمام",
+    "SUB_HEADING": "يعد تصميم الديكور الداخلي للحمام جانبًا أساسيًا من الراحة والفخامة المنزلية، وفي إيزيهومز ندرك دوره المحوري في تحسين الحياة اليومية. في إيزيهومز، نفهم أهمية تصميم الديكور الداخلي للحمام في رفع جودة حياتك وتحسين بيئة منزلك. لهذا السبب نحن ملتزمون بإنشاء حمامات ليست فقط جميلة وعملية بل أيضًا ملاذات فاخرة حيث يمكنك الاسترخاء، والتجدد، والدلال بنفسك بأسلوب راقٍ. مرحبًا بكم في إيزيهومز، حيث يكون كل حمام تحفة فنية من الراحة والأناقة.",
+    "CARD_TEXT": "تصميم الحمام {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "KIDS_ROOM_DATA": {
+    "HEADING": "تصميم الديكور الداخلي لغرفة الأطفال",
+    "SUB_HEADING": "تصميم الديكور الداخلي لغرفة الأطفال ضروري لخلق بيئة مغذية وملهمة وآمنة حيث يمكن للأطفال الازدهار والنمو. في إيزيهومز، نفهم أهمية تصميم ديكور غرفة الأطفال في تشكيل سنوات الطفولة المبكرة. لهذا السبب نحن ملتزمون بإنشاء مساحات تلهم وتغذي وتمكن الأطفال من الحلم الكبير والوصول إلى النجوم. مرحبًا بكم في إيزيهومز، حيث تكون كل غرفة أطفال عالمًا سحريًا ينتظر الاكتشاف.",
+    "CARD_TEXT": "تصميم غرفة الأطفال {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "STUDY_ROOM_DATA": {
+    "HEADING": "تصميم الديكور الداخلي لغرفة الدراسة",
+    "SUB_HEADING": "في إيزيهومز، نفهم أهمية تصميم الديكور الداخلي لغرفة الدراسة في خلق بيئات مواتية للتعلم والإبداع والنمو الشخصي. لهذا السبب نحن ملتزمون بإنشاء غرف دراسة ليست فقط وظيفية وفعالة ولكن أيضًا ملهمة وراعية. مرحبًا بكم في إيزيهومز، حيث تكون كل غرفة دراسة تحفة من الإنتاجية والإبداع.",
+    "CARD_TEXT": "تصميم غرفة الدراسة {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "TV_UNIT_DATA": {
+    "HEADING": "تصميم وحدة التلفاز",
+    "SUB_HEADING": "في إيزيهومز، نفهم أهمية تصميم وحدة التلفاز في خلق مساحات معيشة عملية وأنيقة. بفضل خبرتنا والتزامنا بجودة الحرفية، نحن ملتزمون بتصميم وحدات تلفاز تتجاوز توقعاتك وتعزز تجربة الترفيه المنزلي الخاصة بك. مرحبًا بكم في إيزيهومز، حيث تكون كل وحدة تلفاز تحفة فنية من التصميم والوظيفة.",
+    "CARD_TEXT": "تصميم وحدة التلفاز {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "WARDROBE_DATA": {
+    "HEADING": "تصميم الديكور الداخلي لخزانة الملابس",
+    "SUB_HEADING": "في إيزيهومز، نفهم أهمية تصميم خزانة الملابس في خلق حلول تخزين عملية وجميلة لمنزلك. بفضل خبرتنا والتزامنا بجودة الحرفية، نحن ملتزمون بإنشاء خزائن تتجاوز توقعاتك وتعزز حياتك اليومية. مرحبًا بكم في إيزيهومز، حيث تكون كل خزانة ملابس تحفة فنية من التنظيم والأناقة.",
+    "CARD_TEXT": "تصميم خزانة الملابس {{number}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "DESIGN_IDEAS_DATA": {
+    "HEADING": "أفكار التصميم",
+    "SUB_HEADING": "إذا كنت تبحث عن تصاميم داخلية منزلية بسيطة، فمرحبًا بك في إيزيهومز، حيث يكون كل تصميم تحفة من الإنتاجية والإبداع.",
+    "CARD_TEXT": "تصميم {{text_to_replace}}",
+    "BUTTON_TEXT": "اعرف المزيد"
+  },
+  "BATHROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم الحمام",
+    "SUB_HEADING": "رفع الروتين اليومي مع تصاميم داخلية فاخرة وعملية للحمام تجمع بين الأناقة والعملية بسلاسة."
+  },
+  "BEDROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم غرفة النوم",
+    "SUB_HEADING": "خلق ملاذات هادئة مع تصاميم داخلية مخصصة لغرف النوم تمزج بين الراحة والأناقة والرقي بسهولة."
+  },
+  "KITCHEN_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم المطبخ",
+    "SUB_HEADING": "تحويل المطابخ إلى مساحات أنيقة وعملية حيث تزدهر الإبداعات الطهوية وتتعزز الروابط الأسرية."
+  },
+  "LIVING_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم غرفة المعيشة",
+    "SUB_HEADING": "إعادة تعريف مساحات المعيشة بتصاميم داخلية مخصصة تنسجم مع الراحة والأناقة والوظيفية للحظات لا تُنسى وتجمعات حيوية."
+  },
+  "KIDS_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم غرفة الأطفال",
+    "SUB_HEADING": "إثارة الخيال وتعزيز النمو بتصاميم داخلية لغرف الأطفال تجمع بين المرح والعملية وتلهم الإبداع."
+  },
+  "STUDY_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم غرفة الدراسة",
+    "SUB_HEADING": "تحفيز الإنتاجية بتصاميم داخلية مخصصة لغرف الدراسة مصممة للتعلم المركّز والتعبير الإبداعي."
+  },
+  "TV_ROOM_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم وحدة التلفاز",
+    "SUB_HEADING": "رفع مساحات الترفيه بتصاميم وحدات تلفاز أنيقة وعملية تدمج بين الأناقة والتكنولوجيا بسلاسة."
+  },
+  "WARDROBE_DESIGN_DETAILS_DATA": {
+    "HEADING": "تصميم خزانة الملابس",
+    "SUB_HEADING": "إعادة تعريف تصميم الخزانة لتنظيم سلس وأناقة مخصصة في كل مساحة."
+  },
+  "BOOK_FREE_SESSIONS": "احجز جلسة تصميم مجانية",
+  "GET_FREE_ESTIMATE": "الحصول على تقدير مجاني",
+  "GLOBAL_KEYWORDS": {
+    "BEDROOM": "غرفة النوم",
+    "BATHROOM": "الحمام",
+    "KITCHEN": "المطبخ",
+    "LIVING_AREA": "منطقة المعيشة",
+    "KIDS_ROOM": "غرفة الأطفال",
+    "STUDY_ROOM": "غرفة الدراسة",
+    "TV_UNIT": "وحدة التلفاز",
+    "WARDROBE": "خزانة الملابس"
+  }
+}

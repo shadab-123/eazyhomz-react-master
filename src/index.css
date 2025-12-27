@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/font/Poppins-Regular.ttf') format('truetype');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'
+}
+.text-center{
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* body.rtl {
+  direction: rtl;
+}
+body.ltr {
+  direction: ltr;
+} */

@@ -1,0 +1,40 @@
+.box {
+    background-color: #fff;
+    padding: 2rem;
+
+    .heading {
+      color: #01070A;
+      font-family: "Poppins", Sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    img {
+      padding: 0.8rem 0rem 1rem 0rem;
+    }
+
+    .sub-text {
+      color: #7A7A7A;
+      height: 60px;
+      padding: 0rem 0rem 1rem 0rem;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    button {
+      font-family: "Poppins", Sans-serif;
+      font-weight: 500;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      fill: #FFFFFF;
+      color: #FFFFFF;
+      background-color: #EF4136;
+      &:hover {
+        background-color: #ef4136;
+        fill: #f0f0f0;
+        color: #f0f0f0;
+    }
+    }
+  }

@@ -1,0 +1,124 @@
+.design-idea {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding-bottom: 40px;
+  position: relative;
+  .form{
+    position: absolute;
+    background-color: #fff;
+    right: 10%;
+    top: 5%;
+    z-index: 1;
+  }
+  .hero-image {
+    background-image: url('../../../public/assets/images/bedroom/Cover%20Page.jpg');
+    background-size: cover;
+    /* Ensure the background image covers the entire div */
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+
+    .blank {
+      flex-grow: 2.5;
+    }
+
+    .interior-design {
+      flex-grow: 1;
+      background-color: #00000066;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      a{
+        text-decoration: none;
+        &:hover{
+          color: #fff;
+        }
+      }
+      button {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #EF4136;
+        border-radius: 9px 9px 9px 9px;
+        padding: 18px 53px 18px 53px;
+      }
+    }
+   
+  }
+  @media (max-width: 1024px) {
+    .form{
+      display: none;
+    }
+    /* Adjust for iPads */
+    .hero-image {
+      flex-direction: column;
+      /* Change to column layout */
+      align-items: center;
+      .interior-design{
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 1450px) {
+    .form{
+      display: none;
+    }
+    .small-heading {
+      width: 80%;
+      margin: 0 30% 0 10%;
+      font-size: 1em;
+      font-weight: 500;
+      color: #7A7A7A;
+      font-family: "Poppins", Sans-serif;
+      padding: 0rem 1rem 0.5rem 1rem;
+      text-wrap: wrap;
+      text-align: justify;
+    }
+    // /* Adjust for iPads *
+  }
+  
+  @media (max-width: 600px) {
+  
+    /* Adjust for mobile devices */
+    .hero-image {
+      .interior-design{
+        p{
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        button{
+          padding: 10px 20px 10px 20px;
+        }
+      }
+      /* Adjust padding for smaller screens if necessary */
+    }
+  }
+
+  .heading {
+    margin: 4% 10% 0 10%;
+    justify-content: center;
+    font-family: "Poppins", Sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0rem 1rem;
+  }
+
+  .small-heading {
+    margin: 0 35% 0 10%;
+    font-size: 1em;
+    font-weight: 500;
+    color: #7A7A7A;
+    font-family: "Poppins", Sans-serif;
+    padding: 0rem 1rem 0.5rem 1rem;
+    text-wrap: wrap;
+    text-align: justify;
+  }
+}
+

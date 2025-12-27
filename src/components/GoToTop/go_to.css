@@ -1,0 +1,14 @@
+.go_to_top{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: orangered;
+    color: white;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}

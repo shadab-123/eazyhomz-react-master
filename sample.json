@@ -1,0 +1,57 @@
+{
+    "bedroom": {
+        "heading": "bedroom_heading",
+        "sub_heading": "bedroom_sub_heading",
+        "main_image": "/assets/bedroom/main.jpeg",
+        "main_image_text": "bedroom_image_heading",
+        "elements": [
+            {
+                "image": "/assets/bedroom/component_1.jpeg",
+                "heading": "bedroom_element_one_heading",
+                "summary": "bedroom_element_one_summary",
+                "know_more_href": "/bedroom/details/bdone",
+                "component_following_key": "bedroom_bdone"
+            },
+            {
+                "image": "/assets/bedroom/component_2.jpeg",
+                "heading": "bedroom_element_two_heading",
+                "summary": "bedroom_element_two_summary",
+                "know_more_href": "/bedroom/details/bdtwo",
+                "component_following_key": "bedroom_bdtwo"
+            },
+            {
+                "image": "/assets/bedroom/component_3.jpeg",
+                "heading": "bedroom_element_three_heading",
+                "summary": "bedroom_element_three_summary",
+                "know_more_href": "/bedroom/details/bdthree",
+                "component_following_key": "bedroom_bdthree"
+            }
+        ],
+        "carousel_elements": [
+            {
+                "image": "/assets/bedroom/carousel_1.jpeg",
+                "heading": "bedroom_carousel_one_heading",
+                "summary": "bedroom_carousel_one_summary"
+            },
+            {
+                "image": "/assets/bedroom/carousel_2.jpeg",
+                "heading": "bedroom_carousel_two_heading",
+                "summary": "bedroom_carousel_two_summary"
+            },
+            {
+                "image": "/assets/bedroom/carousel_3.jpeg",
+                "heading": "bedroom_carousel_three_heading",
+                "summary": "bedroom_carousel_three_summary"
+            }
+        ]
+    },
+    "bedroom_bdone": {
+        "placeholder": "Configuration to be written accordingly"
+    },
+    "bedroom_bdtwo": {
+        "placeholder": "Configuration to be written accordingly"
+    },
+    "bedroom_bdthree": {
+        "placeholder": "Configuration to be written accordingly"
+    }
+}

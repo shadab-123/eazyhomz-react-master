@@ -1,0 +1,218 @@
+// .living-area-details-container {
+//   display: flex;
+//   position: relative;
+//   padding: 1rem;
+//   margin: 0 0 1rem 0;
+//   justify-content: space-between;
+//   min-height: 70vh;
+//   height: 70vh;
+
+//   .form-with-icon {
+//     display: flex;
+//     position: relative;
+//     flex-direction: column;
+//     width: 50%;
+//     padding: 0 2rem;
+
+//     .cross-btn {
+//       position: absolute;
+//       right: 63px;
+//       top: 25px;
+//       color: #EF4136;
+//       cursor: pointer;
+//     }
+
+//     .form {
+//       width: 100%;
+//       height: 100%;
+//       padding: 2rem;
+//       gap: 2rem;
+//     }
+//   }
+
+//   .details-left {
+//     width: 50%;
+//     margin: 1rem;
+//     padding: 0 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+
+
+//     .details-left-upper {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0.5rem;
+//     }
+
+//     .stats {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       .details-why-us-card-box {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 0.8rem;
+//         margin-bottom: 0rem 2rem 2rem 2rem;
+
+//         img {
+//           width: 70px;
+//           height: 70px;
+//         }
+
+//         .text {
+//           padding: 0 1rem;
+//           font-size: 1rem;
+//           // height: 40px;
+//           overflow: hidden;
+//           text-align: center;
+//         }
+//       }
+//     }
+
+//     button {
+//       font-family: "Poppins", Sans-serif;
+//       text-decoration: none;
+//       font-weight: 500;
+//       background-color: #EF4136;
+//       color: #fff;
+//       border-style: solid;
+//       border-radius: 5px;
+//     }
+//   }
+
+//   .details-right {
+//     width: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-bottom: 1rem;
+//     height: 100%;
+//     overflow: hidden;
+//     border-radius: 1rem;
+
+//     .slick-slider {
+//       width: 800px;
+//       height: 680px;
+
+//       .slick-slide {
+//         width: 800px;
+//         height: 680px;
+//         border-radius: 1rem;
+
+//         .slider-child {
+//           border-radius: 1rem;
+//           width: 800px;
+//           height: 680px;
+
+
+//           .home-img {
+//             border-radius: 1rem;
+//             width: 800px;
+//             height: 680px;
+//             object-fit: cover; // Changed to cover for consistent sizing
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 1400px) {
+//   .living-area-details-container {
+//     .details-left {
+//       .stats {
+//         .details-why-us-card-box {
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           gap: 0.8rem;
+//           // margin-bottom: 0rem 2rem 2rem 2rem;
+      
+//           img {
+//             width: 50px;
+//             height: 50px;
+//           }
+      
+//           .text {
+//             padding: 0 1rem;
+//             font-size: 0.8rem;
+//             // height: 40px;
+//             overflow: hidden;
+//             text-align: center;
+//           }
+//         }
+//       }
+    
+//     }
+//   }
+
+
+// }
+
+// /* Media Query 1000px */
+// @media only screen and (max-width: 1000px) {
+//   .living-area-details-container {
+//     flex-direction: column;
+//     padding: 2rem;
+//     gap: 1rem;
+//     height: auto;
+
+//     .form-with-icon {
+//       width: 100%;
+//       padding: 2rem;
+
+//       .cross-btn {
+//         right: 63px;
+//         top: 55px;
+//       }
+//     }
+
+//     .details-left {
+//       width: 100%;
+//       gap: 4rem;
+//       margin: 0;
+//       padding: 0;
+
+//       .stats {
+//         gap: 1.25rem;
+//         flex-wrap: wrap;
+//         align-content: flex-start;
+//         align-items: center;
+//         justify-content: center;
+//       }
+//     }
+
+//     .details-right {
+//       width: 100%;
+//       height: 600px;
+//       // background-color: #EF4136;
+//     }
+//   }
+// }
+
+// /* Media Query 520px */
+// @media only screen and (max-width: 520px) {
+//   .living-area-details-container {
+//     .details-left {
+//       gap: 20px;
+//     }
+
+//     .form-with-icon {
+//       width: 100%;
+//       padding: 1rem;
+
+//       .cross-btn {
+//         right: 63px;
+//         top: 55px;
+//       }
+//     }
+
+//     .details-right {
+//       width: 100%;
+//       height: 300px;
+//     }
+//   }
+// }

@@ -1,0 +1,55 @@
+.step-card-box {
+    background-color: #ffffff;
+
+    p.heading {
+        padding-top: 0px !important;
+    }
+
+    .step-img {
+        width: 100%; 
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 15px; 
+    }
+
+    .heading {
+        color: #000000;
+        font-size: 19px; 
+        font-weight: 600; 
+        text-align: center;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .sub-heading{
+        color: #7A7A7A;
+        font-size: 16px;
+        text-align: center;
+        text-align: center;
+        text-wrap: wrap;
+        padding: 1rem 2rem 2rem 2rem;
+    }
+}
+
+
+  
+  @media (max-width: 600px) {
+  
+    .heading {
+        color: #000000;
+        font-size: 16px; 
+        font-weight: 600; 
+        text-align: center;
+        // padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .sub-heading{
+        color: #7A7A7A;
+        font-size: 12px; 
+        font-weight: 600; 
+        text-align: center;
+        text-align: center;
+        text-wrap: wrap;
+        padding: 1rem;;
+    }
+    
+  }
