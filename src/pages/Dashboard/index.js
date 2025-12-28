@@ -32,6 +32,7 @@ const Dashboard = () => {
         <div className='hero-image'>
           <div className='hero-image-heading'>
             <div className='hero-heading'>
+              <h1>hello testing</h1>
               <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING1')}</h1>
               <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING2')}</h1>
               <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING3')}</h1>
