@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Button } from '@mui/material';
 import './form-component.scss';
 import { useTranslation } from 'react-i18next';
 import MuiPhoneNumber from 'material-ui-phone-number';
+import emailjs from '@emailjs/browser';
 
 const countryOptions = [
   { value: 'IN', text: '🇮🇳', label: '🇮🇳 +91', isdCode: '+91' },
@@ -17,9 +18,15 @@ const FormComponent = () => {
   const { t } = useTranslation();
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
   const [isWhatsAppChecked, setIsWhatsAppChecked] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [phoneValue, setPhoneValue] = useState('');
   const [data, setData] = useState({
     name: "", email: "", number: "", location: "",isd:''
   })
+
+  useEffect(() => {
+    emailjs.init('n8BOqYzAfEps7Lw3D');
+  }, []);
 
   const handleCountryChange = (event) => {
     const selected = countryOptions.find(option => option.value === event.target.value);
@@ -40,6 +47,7 @@ const FormComponent = () => {
   }
   const handleOnChange = (value) => {
     console.log('Full Phone Number:', value);
+    setPhoneValue(value);
 
     // Extract the country code and phone number
     const match = value.match(/^(\+\d+)(.*)$/); // Regex to split country code and phone number
@@ -55,29 +63,44 @@ const FormComponent = () => {
   };
 
   const handleModalFormSubmit = async (e) => {
-    // e.preventDefault()
-    // data["entertained"] = false
-    // data["isd"] = selectedCountry.isdCode
-    // data["pincode"] = ""
-    // data["whatsapp"] = isWhatsAppChecked
-    // data["origin"] = window.location.pathname
-    // const collectionRef = collection(db, "consultation")
-    // const response = await addDoc(collectionRef, data)
-    // if (response != null) {
-    //   // Do something here with response
-    //   console.log(response)
-    //   window.location.reload()
-    // }
+    e.preventDefault();
+    setIsLoading(true);
+    
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      number: data.isd + data.number,
+      location: data.location,
+      whatsapp: isWhatsAppChecked ? 'Yes' : 'No'
+    };
+
+    try {
+      const result = await emailjs.send('service_momf11c', 'template_p3k8pkh', templateParams);
+      console.log('Email sent successfully:', result);
+      alert('Form submitted successfully!');
+      // Reset form
+      setData({
+        name: "", email: "", number: "", location: "", isd: ''
+      });
+      setIsWhatsAppChecked(true);
+      setPhoneValue('');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send email. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleModalFormSubmit}>
       <h2>{t('GLOBAL_FORM_DATA.TALK_TO_A_DESIGNER')}</h2>
       <TextField
         name="name"
         placeholder={t('GLOBAL_FORM_DATA.PLACEHOLDER_NAME')}
         variant="standard" size="small"
         fullWidth
+        disabled={isLoading}
         InputProps={{
           classes: {
             input: 'custom-placeholder',
@@ -92,6 +115,7 @@ const FormComponent = () => {
         variant="standard"
         size="small"
         fullWidth
+        disabled={isLoading}
         InputProps={{
           classes: {
             input: 'custom-placeholder',
@@ -126,6 +150,8 @@ const FormComponent = () => {
         /> */}
         <MuiPhoneNumber
           defaultCountry="ae"
+          value={phoneValue}
+          disabled={isLoading}
           // regions={['asia']}
           onChange={handleOnChange}
         />
@@ -133,7 +159,7 @@ const FormComponent = () => {
       </div>
       <div className="checkbox-label">
         <label className="toggle-switch">
-          <input type="checkbox" checked={isWhatsAppChecked} onChange={handleWhatsAppChange} />
+          <input type="checkbox" checked={isWhatsAppChecked} onChange={handleWhatsAppChange} disabled={isLoading} />
           <span className="slider"></span>
         </label>
         <span className='whatsapp-placeholder'>{t('GLOBAL_FORM_DATA.PLACEHOLDER_WHATSAPP')}</span>
@@ -144,6 +170,7 @@ const FormComponent = () => {
         variant="standard"
         size="small"
         fullWidth
+        disabled={isLoading}
         InputProps={{
           classes: {
             input: 'custom-placeholder',
@@ -151,8 +178,8 @@ const FormComponent = () => {
         }}
         onChange={updateData}
       />
-      <Button type="submit" variant="contained" className="submit-button" onClick={handleModalFormSubmit}>
-        {t('GLOBAL_FORM_DATA.BOOK_A_FREE_DESIGN_SESSION')}
+      <Button type="submit" variant="contained" className="submit-button" disabled={isLoading}>
+        {isLoading ? 'Submitting...' : t('GLOBAL_FORM_DATA.BOOK_A_FREE_DESIGN_SESSION')}
       </Button>
       {/* <div className="form-footer">
         {t('GLOBAL_FORM_DATA.FOOTER_DATA_1')} <a href="#">{t('GLOBAL_FORM_DATA.FOOTER_DATA_2')}</a> {t('GLOBAL_FORM_DATA.FOOTER_DATA_3')} <a href="#">{t('GLOBAL_FORM_DATA.FOOTER_DATA_4')}</a>.
