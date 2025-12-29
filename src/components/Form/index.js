@@ -78,17 +78,17 @@ const FormComponent = () => {
       const result = await emailjs.send('service_momf11c', 'template_p3k8pkh', templateParams);
       console.log('Email sent successfully:', result);
       alert('Form submitted successfully!');
-      // Reset form
-      setData({
-        name: "", email: "", number: "", location: "", isd: ''
-      });
-      setIsWhatsAppChecked(true);
-      setPhoneValue('');
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send email. Please try again.');
     } finally {
       setIsLoading(false);
+      // Reset form after submission
+      setData({
+        name: "", email: "", number: "", location: "", isd: ''
+      });
+      setIsWhatsAppChecked(true);
+      setPhoneValue('');
     }
   }
 
@@ -101,6 +101,7 @@ const FormComponent = () => {
         variant="standard" size="small"
         fullWidth
         disabled={isLoading}
+        required
         InputProps={{
           classes: {
             input: 'custom-placeholder',
