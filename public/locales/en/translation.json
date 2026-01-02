@@ -47,9 +47,8 @@
   },
   "DASHBOARD_DATA": {
     "HERO_SECTION": {
-      "HEADING1": "Dream",
-      "HEADING2": "Design",
-      "HEADING3": "Build"
+      "HEADING": "Dream • Design • Build",
+      "SUBHEADING": "Premium modular interiors & personalized design solutions for your perfect home"
     },
     "WHY_US": {
       "HEADING": "Why Eazyhomz",

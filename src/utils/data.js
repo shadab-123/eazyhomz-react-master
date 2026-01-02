@@ -19,10 +19,10 @@ export const NAV_ROUTE_LINK = () => {
         },
         {
             text: t('NAV_ROUTE_LINKS.ARCHITECTURE'),
-            to: ROUTES.LIVING_AREA,
+            to: ROUTES.ARCHITECTURE,
             nestedLinks: [],
             havingNestedRoute: false,
-            isDisable:true
+            isDisable:false
         },
         {
             text: t('NAV_ROUTE_LINKS.INTERIOR'),
@@ -83,10 +83,10 @@ export const NAV_ROUTE_LINK = () => {
 
         {
             text: t('NAV_ROUTE_LINKS.LANDSCAPE'),
-            to: ROUTES.KITCHEN,
+            to: ROUTES.LANDSCAPE,
             nestedLinks: [],
             havingNestedRoute: false,
-            isDisable:true
+            isDisable:false
         },
         // {
         //     text: t('NAV_ROUTE_LINKS.BIM_Solution'),
@@ -125,6 +125,39 @@ export const NAV_ROUTE_LINK = () => {
     return NAV_ROUTE_LINKS;
 }
 
+export const ARCHITECTURE_DATAS = () => {
+    return {
+        HEADING: 'Architecture Design',
+        SUB_HEADING: 'Explore our innovative architecture designs',
+        ARCHITECTURE_DATA_CARD_DATA: [
+            {
+                id: "1",
+                category: ROUTES.LIVING_AREA,
+                logoPath: "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+                text: 'Modern Living Spaces',
+                buttonText: 'View Designs'
+            },
+            // Add more cards as needed
+        ]
+    }
+}
+
+export const LANDSCAPE_DATAS = () => {
+    return {
+        HEADING: 'Landscape Design',
+        SUB_HEADING: 'Beautiful outdoor designs',
+        LANDSCAPE_DATA_CARD_DATA: [
+            {
+                id: "1",
+                category: ROUTES.LIVING_AREA,
+                logoPath: "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+                text: 'Garden Designs',
+                buttonText: 'View Designs'
+            },
+            // Add more cards as needed
+        ]
+    }
+}
 
 export const DASHBOARD_DATA = {
     HERO_SECTION: {
@@ -1395,69 +1428,103 @@ export const DESIGN_IDEAS_DATAS = () => {
 
 
 export const INTERIOR_DATAS = () => {
-    const { t } = useTranslation();
-    const INTERIOR_DATA = {
-        HEADING: t('INTERIOR_DATA.HEADING'),
-        SUB_HEADING: t('INTERIOR_DATA.SUB_HEADING'),
+    return {
+        HEADING: 'Interior Design',
+        SUB_HEADING: 'Explore our interior design options',
         INTERIOR_DATA_CARD_DATA: [
             {
                 id: "1",
                 category: ROUTES.LIVING_AREA,
                 logoPath: "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.LIVING_AREA') }),
-
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Living Area Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "2",
                 category: ROUTES.KITCHEN,
                 logoPath: "/assets/images/kitchen/Kitchen%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.KITCHEN') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Kitchen Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "3",
                 category: ROUTES.BEDROOM,
                 logoPath: "/assets/images/bedroom/Bedroom%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.BEDROOM') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Bedroom Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "4",
                 category: ROUTES.BATHROOM,
                 logoPath: "/assets/images/bathroom/Bathroom%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.BATHROOM') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Bathroom Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "5",
                 category: ROUTES.KIDS_ROOM,
                 logoPath: "/assets/images/kids%20room/Kids%20Room%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.KIDS_ROOM') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Kids Room Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "6",
                 category: ROUTES.STUDY_ROOM,
                 logoPath: "/assets/images/study%20room/Study%20Room%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.STUDY_ROOM') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Study Room Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "7",
                 category: ROUTES.TV_UNIT,
                 logoPath: "/assets/images/tv%20unit/TV%20Unit%20Design%201.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.TV_UNIT') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'TV Unit Design',
+                buttonText: 'View Designs'
             },
             {
                 id: "8",
                 category: ROUTES.WARDROBE,
                 logoPath: "/assets/images/wardrobe/Wardrobe%20Design%208.jpg",
-                text: t('INTERIOR_DATA.CARD_TEXT', { text_to_replace: t('GLOBAL_KEYWORDS.WARDROBE') }),
-                buttonText: t('INTERIOR_DATA.BUTTON_TEXT')
+                text: 'Wardrobe Design',
+                buttonText: 'View Designs'
             },
         ]
-    }
-    return INTERIOR_DATA
+    };
 }
+
+// export const ARCHITECTURE_DATAS = () => {
+//     const { t } = useTranslation();
+//     const ARCHITECTURE_DATA = {
+//         HEADING: t('ARCHITECTURE_DATA.HEADING', 'Architecture Design'),
+//         SUB_HEADING: t('ARCHITECTURE_DATA.SUB_HEADING', 'Explore our innovative architecture designs'),
+//         ARCHITECTURE_DATA_CARD_DATA: [
+//             {
+//                 id: "1",
+//                 category: ROUTES.LIVING_AREA,
+//                 logoPath: "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+//                 text: t('ARCHITECTURE_DATA.CARD_TEXT', { text_to_replace: 'Modern Living Spaces' }),
+//                 buttonText: t('ARCHITECTURE_DATA.BUTTON_TEXT', 'View Designs')
+//             },
+//             // Add more cards as needed
+//         ]
+//     }
+// }
+
+// export const LANDSCAPE_DATAS = () => {
+//     const { t } = useTranslation();
+//     const LANDSCAPE_DATA = {
+//         HEADING: t('LANDSCAPE_DATA.HEADING', 'Landscape Design'),
+//         SUB_HEADING: t('LANDSCAPE_DATA.SUB_HEADING', 'Beautiful outdoor designs'),
+//         LANDSCAPE_DATA_CARD_DATA: [
+//             {
+//                 id: "1",
+//                 category: ROUTES.LIVING_AREA,
+//                 logoPath: "/assets/images/living%20room/Living%20Room%20Design%201.jpg",
+//                 text: t('LANDSCAPE_DATA.CARD_TEXT', { text_to_replace: 'Garden Designs' }),
+//                 buttonText: t('LANDSCAPE_DATA.BUTTON_TEXT', 'View Designs')
+//             },
+//             // Add more cards as needed
+//         ]
+//     }
+//     return LANDSCAPE_DATA
+// }

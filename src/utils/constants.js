@@ -22,6 +22,8 @@ export const ROUTES = {
   TV_UNIT_DETAILS: '/tv_unit_details',
   WARDROBE_DETAILS: '/wardrobe_details',
   WARDROBE: '/wardrobe',
+  ARCHITECTURE: '/architecture',
+  LANDSCAPE: '/landscape',
 };
 
 export const CATEGORY_LIST = [

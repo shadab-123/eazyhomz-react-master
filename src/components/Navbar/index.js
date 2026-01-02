@@ -146,8 +146,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className={style.navBtn}>
-          <ButtonComponent onClick={handleModalFormOpen} text={t("GET_FREE_ESTIMATE")} />
+        <div className={style.languageToggle}>
+          <span className={style.langLabel}  style={{ color: '#fff' }}>{lang === 'en' ? 'عربي' : 'EN'}</span>
+          <label className={style.toggleSwitch}>
+            <input 
+              type="checkbox" 
+              checked={lang === 'en'} 
+              onChange={() => changeLanguage(lang === 'en' ? 'ar' : 'en')} 
+            />
+            <span className={style.slider}></span>
+          </label>
+          <span className={style.langLabel} style={{color: '#fff' }}>{lang === 'en' ? 'EN' : 'عربي'}</span>
         </div>
 
         <div className={style.icon}>

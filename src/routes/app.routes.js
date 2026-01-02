@@ -22,6 +22,8 @@ const TVUnitDetails = React.lazy(() => import('../pages/TVUnit/TVUnitDetails'));
 const InteriorDesign = React.lazy(() => import('../pages/InteriorDesign'));
 const FurnitureByEasyHomez = React.lazy(() => import('../pages/FurnitureByEasyHomez'));
 const EModular = React.lazy(() => import('../pages/EModular'));
+const Architecture = React.lazy(() => import('../pages/Architecture'));
+const Landscape = React.lazy(() => import('../pages/Landscape'));
 
 const NotFound = React.lazy(() => import('../pages/404'));
 
@@ -113,6 +115,16 @@ export const appRoutes = {
       path: ROUTES.E_MODULAR,
       exact: true,
       element: <EModular />,
+    },
+    {
+      path: ROUTES.ARCHITECTURE,
+      exact: true,
+      element: <Architecture />,
+    },
+    {
+      path: ROUTES.LANDSCAPE,
+      exact: true,
+      element: <Landscape />,
     },
     {
       path: ROUTES.BEDROOM_DETAILS,

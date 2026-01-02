@@ -2,24 +2,24 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Grid from '@mui/material/Grid';
 import CategoryCard from '../../components/CategoryCard';
-import './design-idea.scss'
-import { INTERIOR_DATAS } from '../../utils/data';
-// import FormComponent from '../../components/Form';
+import './architecture.scss'
+import { ARCHITECTURE_DATAS } from '../../utils/data';
+//import FormComponent from '../../components/Form';
 
-const InteriorDesign = () => {
-  const INTERIOR_DATA = INTERIOR_DATAS();
+const Architecture = () => {
+  const ARCHITECTURE_DATA = ARCHITECTURE_DATAS();
   return (
     <Layout>
-      <div className="design-idea">
+      <div className="architecture">
         {/* <FormComponent/> */}
         <div className='hero-image'>
           <div className='blank'></div>
         </div>
-        <h1 className='heading'>{INTERIOR_DATA.HEADING}​</h1>
-        <p className='small-heading'>{INTERIOR_DATA.SUB_HEADING}</p>
+        <h1 className='heading'>{ARCHITECTURE_DATA.HEADING}</h1>
+        <p className='small-heading'>{ARCHITECTURE_DATA.SUB_HEADING}</p>
         <Grid container rowGap={1}>
           {
-            INTERIOR_DATA.INTERIOR_DATA_CARD_DATA.map((data, index) => {
+            ARCHITECTURE_DATA.ARCHITECTURE_DATA_CARD_DATA.map((data, index) => {
               return (
                 <CategoryCard
                   key={data.id}
@@ -39,4 +39,4 @@ const InteriorDesign = () => {
   )
 }
 
-export default InteriorDesign
+export default Architecture

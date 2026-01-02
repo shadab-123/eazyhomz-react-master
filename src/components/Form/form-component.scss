@@ -1,14 +1,51 @@
 .form {
+    color: white;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    gap: 1.5rem;
-    padding: 2rem 1rem 1rem 1rem;
-    background: #fcfdff;
+    gap: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     box-shadow: 0px 0px 1.5625rem 0px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    animation: fadeInUp 0.8s ease-out;
 
     .custom-placeholder::placeholder {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        color:white;
+    }
+
+    // Material-UI TextField input text color
+    .MuiInputBase-input {
+        color: white !important;
+    }
+
+    // MuiPhoneNumber input text color
+    .MuiPhoneNumber-flagButton {
+        color: white;
+    }
+
+    .MuiPhoneNumber-root .MuiInputBase-input {
+        color: white !important;
+    }
+
+    // Ensure all input elements have white text
+    input {
+        color: white !important;
+    }
+
+    // TextField label color (if visible)
+    .MuiInputLabel-root {
+        color: white !important;
+    }
+
+    // TextField underline color
+    .MuiInput-underline:before,
+    .MuiInput-underline:after {
+        border-bottom-color: white !important;
+    }
+
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+        border-bottom-color: white !important;
     }
 
     .mobile-number-field {
@@ -29,8 +66,8 @@
 
             option {
                 padding: 0.5rem;
-                background-color: #f9f9f9;
-                color: #333;
+                background-color: white;
+                color: #1ec40f;
             }
 
             option:hover {
@@ -39,7 +76,7 @@
 
             option:checked {
                 background-color: #d9d9d9;
-                color: #000;
+                color: #692525;
             }
         }
 
@@ -56,13 +93,36 @@
     }
 
     .submit-button {
-        background-color: #ff0000;
-        color: #fff;
+        margin-top: 0.8rem;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        background: linear-gradient(45deg, #c41616, #c9481b);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        backdrop-filter: blur(2px);
+
+
+        /* softer, darker shadow */
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+        transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
 
         &:hover {
-            background-color: #cc0000;
+          background: linear-gradient(45deg, #a11212, #b8431a);
+          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+          transform: translateY(-2px);
         }
-    }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+      }  
 
     .form-footer {
         font-size: 0.6rem;
@@ -195,5 +255,16 @@
         .checkbox-label .whatsapp-placeholder {
             font-size: 0.5rem;
         }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

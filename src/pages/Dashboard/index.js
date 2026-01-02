@@ -14,11 +14,14 @@ import { DASHBOARD_DATA } from '../../utils/data';
 import { useTranslation } from 'react-i18next';
 import FormComponent from '../../components/Form';
 import DialogModal from '../../components/Modal';
+import Testimonials from '../../components/Testimonials';
 
 const Dashboard = () => {
   const { t } = useTranslation();
   const [openFormModal, setOpenFormModal] = useState(false)
-  const cardData = t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true });
+  const cardData = Array.isArray(t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true })) 
+    ? t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true }) 
+    : [];
   const handleModalFormOpen = () => {
     setOpenFormModal(true)
   }
@@ -32,9 +35,9 @@ const Dashboard = () => {
         <div className='hero-image'>
           <div className='hero-image-heading'>
             <div className='hero-heading'>
-              <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING1')}</h1>
-              <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING2')}</h1>
-              <h1>{t('DASHBOARD_DATA.HERO_SECTION.HEADING3')}</h1>
+              <h1>Dream • <span className="orange-gradient">Design</span> • Build</h1>
+              <p className="hero-subheading">{t('DASHBOARD_DATA.HERO_SECTION.SUBHEADING')}</p>
+              <ButtonComponent text={t("GET_FREE_ESTIMATE")} onClick={handleModalFormOpen} className="hero-cta-button" />
             </div>
           </div>
           <div className='hero-image-form'>
@@ -48,9 +51,11 @@ const Dashboard = () => {
           <div className='why-us'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
             <div className='why-us-card'>
-              <Grid classNam="grid" container spacing={1}>
+              <Grid classNam="grid" container spacing={3}>
                 {
-                  t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }).map((data) => {
+                  (Array.isArray(t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true })) 
+                    ? t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }) 
+                    : []).map((data) => {
                     return (
                       <WhyUsCard
                         key={data.id}
@@ -66,7 +71,9 @@ const Dashboard = () => {
           <div className='home-design-made-easy'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.HOME_DESIGN_DATA.HEADING')}</h1>
             {
-              t('DASHBOARD_DATA.HOME_DESIGN_DATA.SUB_HEADING', {returnObjects: true}).map((data) => {
+              (Array.isArray(t('DASHBOARD_DATA.HOME_DESIGN_DATA.SUB_HEADING', {returnObjects: true})) 
+                ? t('DASHBOARD_DATA.HOME_DESIGN_DATA.SUB_HEADING', {returnObjects: true}) 
+                : []).map((data) => {
                 return (
                   <p className='text-center sub-text'>{data}</p>
                 )
@@ -147,6 +154,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <Testimonials />
       </div>
       {
         openFormModal && <DialogModal
@@ -155,7 +163,9 @@ const Dashboard = () => {
           title={" "}
           // width={width}
         >
-          <FormComponent/>
+          <div className='esimation-form'>
+            <FormComponent/>
+          </div>
         </DialogModal>
       }
     </Layout>

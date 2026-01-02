@@ -5,23 +5,18 @@
   position: relative;
 
   .form {
-    position: absolute;
-    background-color: #fff;
-    right: 10%;
-    top: 5%;
-    z-index: 1;
+    display: none; // Hidden on mobile
   }
 
   .hero-image {
-    //   background-image: url('../../../public/assets/images/bathroom/Bathroom%20Design%201.jpg');
     background-size: cover;
-    /* Ensure the background image covers the entire div */
     background-position: center;
-    min-height: 400px;
+    min-height: 300px; // Smaller for mobile
     display: flex;
+    flex-direction: column; // Column on mobile
 
     .blank {
-      flex-grow: 2.5;
+      flex-grow: 1;
     }
 
     .interior-design {
@@ -31,104 +26,108 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 1rem;
 
       p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #ffffff;
+        text-align: center;
       }
 
       button {
-
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         color: #fff;
         background-color: #EF4136;
-        border-radius: 9px 9px 9px 9px;
-        padding: 18px 53px 18px 53px;
+        border-radius: 9px;
+        padding: 12px 24px;
+        margin-top: 1rem;
       }
-    }
-
-  }
-
-  @media (max-width: 1000px) {
-    .form {
-      display: none;
-    }
-
-    /* Adjust for iPads */
-    .hero-image {
-      flex-direction: column;
-      /* Change to column layout */
-      align-items: center;
-
-      .interior-design {
-        width: 100%;
-      }
-    }
-
-    .small-heading {
-      width: 80%;
-      margin: 0 30% 0 10%;
-      font-size: 1em;
-      font-weight: 500;
-      color: #7A7A7A;
-      font-family: "Poppins", Sans-serif;
-      padding: 0rem 1rem 0.5rem 1rem;
-      text-wrap: wrap;
-      text-align: justify;
     }
   }
 
-  @media (max-width: 600px) {
-
-    /* Adjust for mobile devices */
+  // Tablet styles
+  @media (min-width: 768px) {
     .hero-image {
+      min-height: 400px;
+      flex-direction: row;
+
       .interior-design {
         p {
-          font-size: 1rem;
-          margin-bottom: 1rem;
+          font-size: 2rem;
         }
 
         button {
-          padding: 10px 20px 10px 20px;
+          font-size: 18px;
+          padding: 18px 53px;
         }
       }
-
-      /* Adjust padding for smaller screens if necessary */
     }
   }
 
-  @media (width >=1000px) and (width <=1450px) {
-    .small-heading {
-      width: 45%;
+  // Desktop styles
+  @media (min-width: 1024px) {
+    .form {
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      right: 10%;
+      top: 5%;
+      z-index: 1;
+    }
+
+    .hero-image {
+      min-height: 400px;
     }
   }
 
   .heading {
-    margin: 4% 10% 0 10%;
+    margin: 2% 5% 0 5%;
     justify-content: center;
     font-family: "Poppins", Sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     padding: 0.5rem 1rem 0rem 1rem;
+    text-align: center;
   }
 
   .small-heading {
-    margin: 0 35% 0 10%;
-    font-size: 1em;
+    margin: 0 5% 0 5%;
+    font-size: 0.9em;
     font-weight: 500;
     color: #7A7A7A;
     font-family: "Poppins", Sans-serif;
     padding: 0rem 1rem 0.5rem 1rem;
     text-wrap: wrap;
-    text-align: justify;
+    text-align: center;
+  }
+
+  // Tablet and desktop
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 2em;
+      margin: 4% 10% 0 10%;
+    }
+
+    .small-heading {
+      margin: 0 10% 0 10%;
+      font-size: 1em;
+      text-align: justify;
+    }
+  }
+
+  // Desktop specific
+  @media (min-width: 1024px) {
+    .small-heading {
+      margin: 0 35% 0 10%;
+      text-align: justify;
+    }
   }
 }
 
 
 // category-details-css-start
-
 
 .category-details-container {
   display: flex;
@@ -136,40 +135,40 @@
   padding: 1rem;
   margin: 0 0 1rem 0;
   justify-content: space-between;
-  min-height: 70vh;
-  height: 70vh;
+  min-height: 50vh; // Smaller for mobile
+  height: auto; // Auto height for mobile
+  flex-direction: column; // Column on mobile
 
   .form-with-icon {
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 50%;
-    padding: 0 2rem;
+    width: 100%; // Full width on mobile
+    padding: 0 1rem;
 
     .cross-btn {
       position: absolute;
-      right: 63px;
-      top: 25px;
+      right: 35px;
+      top: 35px;
       color: #EF4136;
       cursor: pointer;
     }
 
     .form {
       width: 100%;
-      height: 100%;
-      padding: 2rem;
-      gap: 2rem;
+      height: auto; // Auto height
+      padding: 1rem;
+      gap: 1rem;
     }
   }
 
   .details-left {
-    width: 50%;
-    margin: 1rem;
-    padding: 0 2rem;
+    width: 100%; // Full width on mobile
+    margin: 1rem 0;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
     .details-left-upper {
       display: flex;
@@ -181,6 +180,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
 
       .details-why-us-card-box {
         display: flex;
@@ -188,16 +189,16 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
-        margin-bottom: 0rem 2rem 2rem 2rem;
+        margin: 0;
 
         img {
-          width: 60px;
-          height: 60px;
+          width: 40px;
+          height: 40px;
         }
 
         .text {
           padding: 0 1rem;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           overflow: hidden;
           text-align: center;
         }
@@ -212,227 +213,119 @@
       color: #fff;
       border-style: solid;
       border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 14px;
     }
   }
 
   .details-right {
-    width: 50%;
+    width: 100%; // Full width on mobile
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    height: 100%;
+    height: auto; // Auto height
     overflow: hidden;
     border-radius: 1rem;
 
     .slick-slider {
       width: 100%;
-      height: 100%;
+      height: auto;
 
       .slick-slide {
         width: 100%;
-        height: 100%;
+        height: auto;
         border-radius: 1rem;
 
         .slider-child {
           border-radius: 1rem;
           width: 100%;
-          height: 100%;
-
+          height: auto;
 
           .home-img {
             border-radius: 1rem;
             width: 100%;
-            height: 100%;
-            aspect-ratio: 16/11;
-            object-fit: cover; // Changed to cover for consistent sizing
+            height: auto;
+            aspect-ratio: 16/9; // Adjusted for mobile
+            object-fit: cover;
           }
         }
       }
     }
   }
-}
 
-@media only screen and (max-width: 1400px) {
-  .category-details-container {
-    min-height: 60vh;
-    height: 60vh;
+  // Tablet styles
+  @media (min-width: 768px) {
+    flex-direction: row;
+    min-height: 70vh;
+    height: 70vh;
+    padding: 1rem;
 
     .form-with-icon {
+      width: 50%;
+      padding: 0 2rem;
+
       .cross-btn {
         right: 63px;
-        top: 15px;
-      }
-
-      h2 {
-        font-size: 1rem;
+        top: 25px;
       }
 
       .form {
-        gap: 1.5rem;
-        padding: 1rem;
-
+        height: 100%;
+        padding: 2rem;
+        gap: 2rem;
       }
     }
 
     .details-left {
-      .details-left-upper{
-        h1{
-          font-size: 1.5rem;
-        }
-        p{
-          font-size: 0.9rem;
-        }
-      }
+      width: 50%;
+      margin: 1rem;
+      padding: 0 2rem;
+
       .stats {
+        flex-wrap: nowrap;
+        gap: 0;
+
         .details-why-us-card-box {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.8rem;
-          // margin-bottom: 0rem 2rem 2rem 2rem;
-          
+          margin: 0 2rem 2rem 2rem;
 
           img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
+            width: 60px;
+            height: 60px;
           }
 
           .text {
-            padding: 0 1rem;
-            font-size: 0.7rem;
-            font-weight: 400;
-            // height: 40px;
-            overflow: hidden;
-            text-align: center;
-
+            font-size: 0.9rem;
           }
         }
       }
-
     }
 
     .details-right {
+      width: 50%;
+      height: 100%;
+
       .slick-slider {
-        width: 100%;
         height: 100%;
 
         .slick-slide {
-          width: 100%;
           height: 100%;
-          border-radius: 1rem;
 
           .slider-child {
-            border-radius: 1rem;
-            width: 100%;
             height: 100%;
 
-
             .home-img {
-              border-radius: 1rem;
-              width: 100%;
               height: 100%;
               aspect-ratio: 16/11;
-              object-fit: cover; // Changed to cover for consistent sizing
             }
           }
         }
       }
     }
   }
-}
 
-/* Media Query 1000px */
-@media only screen and (max-width: 1000px) {
-  .category-details-container {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    height: auto;
-    .form-with-icon{
-      width: 100%;
-      padding: 2rem;
-      .cross-btn {
-        right: 63px;
-        top: 55px;
-      }
-      .form{
-        gap: 1.5rem;
-        padding: 1rem;
-     
-      }
-    }
-
- 
-
-    .details-left {
-      width: 100%;
-      gap: 4rem;
-      margin: 0;
-      padding: 0;
-
-      .stats {
-        gap: 1.25rem;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
-
-    .details-right {
-      width: 100%;
-
-      .slick-slider {
-        width: 100%;
-        height: 100%;
-
-        .slick-slide {
-          width: 100%;
-          height: 100%;
-          border-radius: 1rem;
-
-          .slider-child {
-            border-radius: 1rem;
-            width: 100%;
-            height: 100%;
-
-
-            .home-img {
-              border-radius: 1rem;
-              width: 100%;
-              height: 100%;
-              aspect-ratio: 16/11;
-              object-fit: cover; // Changed to cover for consistent sizing
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Media Query 520px */
-@media only screen and (max-width: 520px) {
-  .category-details-container {
-    .details-left {
-      gap: 20px;
-    }
-
-    .form-with-icon {
-      width: 100%;
-      padding: 1rem;
-
-      .cross-btn {
-        right: 35px;
-        top: 35px;
-      }
-    }
-
-    .details-right {
-      width: 100%;
-    }
+  // Desktop styles
+  @media (min-width: 1024px) {
+    padding: 1rem;
   }
 }

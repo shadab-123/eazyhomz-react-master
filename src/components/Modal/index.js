@@ -81,6 +81,14 @@ const DialogModal = ({
       maxWidth={width}
       fullWidth
       fullScreen={fullScreen}
+      PaperProps={{
+        sx: {
+          backgroundColor: 'rgba(20, 20, 20, 0.95)',
+          backdropFilter: 'blur(25px)',
+          border: '2px solid rgba(235, 94, 32, 0.4)',
+          borderRadius: '25px',
+        }
+      }}
     // style={{ zIndex: 100000 }} 
     >
       {

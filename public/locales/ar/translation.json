@@ -48,9 +48,8 @@
 
   "DASHBOARD_DATA": {
     "HERO_SECTION": {
-      "HEADING1": "حلم",
-      "HEADING2": "تصميم",
-      "HEADING3": "بناء"
+      "HEADING": "حلم • تصميم • بناء",
+      "SUBHEADING": "ديكورات داخلية موديولار متميزة وحلول تصميم شخصية لمنزلك المثالي"
     },
     "WHY_US": {
       "HEADING": "لماذا إيزيهومز",
