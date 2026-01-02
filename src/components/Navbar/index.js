@@ -1,191 +1,187 @@
-import React from 'react';
-import { useEffect, useState, useRef } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { NAV_ROUTE_LINK } from '../../utils/data';
-import style from './navbar.module.scss';
-import Dropdown from './Dropdown';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import ButtonComponent from '../Button';
-import { useTranslation } from 'react-i18next';
-import DialogModal from '../Modal';
-import FormComponent from '../Form';
+import React, { useEffect, useRef, useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { NAV_ROUTE_LINK } from "../../utils/data";
+import style from "./navbar.module.scss";
+import Dropdown from "./Dropdown";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import { useTranslation } from "react-i18next";
+import DialogModal from "../Modal";
+import FormComponent from "../Form";
 
 const Navbar = () => {
-
   const NAV_ROUTE_LINKS = NAV_ROUTE_LINK();
-  const [nestedLinks, setNestedLinks] = useState([]);
-  const [openFormModal, setOpenFormModal] = useState(false);
   const location = useLocation();
   const sidebarRef = useRef(null);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
-  // 👉 NEW: Track which sidebar index is open
   const [openSidebarIndex, setOpenSidebarIndex] = useState(null);
+  const [nestedLinks, setNestedLinks] = useState([]);
+  const [openFormModal, setOpenFormModal] = useState(false);
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const openLang = Boolean(anchorEl);
+  const { i18n } = useTranslation();
   const [lang, setLang] = useState(localStorage.getItem("lang") || "en");
-  const { i18n, t } = useTranslation();
 
-  const handleClick2 = (index, nested) => {
-    setOpenSidebarIndex(openSidebarIndex === index ? null : index);
-    setNestedLinks(nested);
-  };
-
+  /* =========================
+     LANGUAGE
+  ========================== */
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLang(lng);
     localStorage.setItem("lang", lng);
   };
 
-  const handleClick1 = () => {
-    document.getElementById('sideBar').style.display = 'flex';
-  };
+  /* =========================
+     SIDEBAR HANDLERS
+  ========================== */
+  const openSidebar = () => setSidebarOpen(true);
+  const closeSidebar = () => setSidebarOpen(false);
 
-  const handleClickOutside = (event) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      handleClose();
+  const handleOutsideClick = (e) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+      closeSidebar();
     }
   };
 
-  const handleClose = () => {
-    document.getElementById('sideBar').style.display = 'none';
+  const handleSidebarAccordion = (index, nested) => {
+    setOpenSidebarIndex(openSidebarIndex === index ? null : index);
+    setNestedLinks(nested);
   };
 
-  const handleModalFormOpen = () => setOpenFormModal(true);
-  const handleModalFormClose = () => setOpenFormModal(false);
-
+  /* =========================
+     EFFECTS
+  ========================== */
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1020) {
-        document.getElementById('sideBar').style.display = 'none';
+      if (window.innerWidth >= 768) {
+        closeSidebar();
       }
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
+  /* =========================
+     RENDER
+  ========================== */
   return (
-    <div>
-      {/* TOP NAVBAR */}
+    <>
+      {/* ================= TOP NAV ================= */}
       <div className={style.container}>
+        {/* LOGO */}
         <div className={style.logo}>
-          <Link to={'/'}>
-          <img
-            src="/assets/images/eazyhomz-logo.png"
-            alt="eazyhomz"
-          />
-          <h1>Eazyhomz</h1></Link>
-          {/* <Link to="/" className="flex items-center gap-3 cursor-pointer">
-            <img
-              src="/assets/images/eazyhomz-logo.png"         // replace with your logo path
-              alt="Eazyhomz"
-              className="h-10 w-10"
-            />
-            <span className="text-xl font-semibold text-gray-800">
-              Eazyhomz
-            </span>
-          </Link> */}
+          <Link to="/">
+            <img src="/assets/images/eazyhomz-logo.png" alt="eazyhomz" />
+            <h1>Eazyhomz</h1>
+          </Link>
         </div>
 
+        {/* DESKTOP NAV */}
         <ul className={style.listItem}>
-          {NAV_ROUTE_LINKS.slice(1).map((val, index) => (
+          {NAV_ROUTE_LINKS.slice(1).map((val, index) =>
             !val.havingNestedRoute ? (
-              <li key={index}
-                className={location.pathname === val.to ? style.activeNavItem : style.navItem}
+              <li
+                key={index}
+                className={
+                  location.pathname === val.to
+                    ? style.activeNavItem
+                    : style.navItem
+                }
               >
                 {val.isDisable ? (
-                  <div style={{ fontSize: "16px", color: "#999" }}>
-                    {val.text}
-                  </div>
+                  <div style={{ color: "#999" }}>{val.text}</div>
                 ) : (
                   <NavLink to={val.to}>
-                    <div style={{ fontWeight: "normal", fontSize: "16px" }}>
-                      {val.text}
-                    </div>
+                    <div>{val.text}</div>
                   </NavLink>
                 )}
               </li>
             ) : (
-              <li key={index}
+              <li
+                key={index}
                 onMouseEnter={() => setActiveDropdown(index)}
                 onMouseLeave={() => setActiveDropdown(null)}
-                className={location.pathname === val.to ? style.activeNavItem : style.navItem}
+                className={
+                  location.pathname === val.to
+                    ? style.activeNavItem
+                    : style.navItem
+                }
               >
-                {val.isDisable ? (
-                  <div style={{ fontSize: "16px", color: "#999" }}>
-                    {val.text}
+                <NavLink to={val.to}>
+                  <div>
+                    {val.text} <span className={style.arrow} />
                   </div>
-                ) : (
-                  <NavLink to={val.to}>
-                    <div style={{ fontWeight: "normal", fontSize: "16px" }}>
-                      {val.text} <span className={style.arrow} />
-                    </div>
-                  </NavLink>
-                )}
+                </NavLink>
 
                 {activeDropdown === index && !val.isDisable && (
                   <Dropdown menuItemsData={val.nestedLinks} />
                 )}
               </li>
             )
-          ))}
+          )}
         </ul>
 
+        {/* LANGUAGE TOGGLE */}
         <div className={style.languageToggle}>
-          <span className={style.langLabel}  style={{ color: '#fff' }}>{lang === 'en' ? 'عربي' : 'EN'}</span>
+          <span className={style.langLabel}>
+            {lang === "en" ? "عربي" : "EN"}
+          </span>
           <label className={style.toggleSwitch}>
-            <input 
-              type="checkbox" 
-              checked={lang === 'en'} 
-              onChange={() => changeLanguage(lang === 'en' ? 'ar' : 'en')} 
+            <input
+              type="checkbox"
+              checked={lang === "en"}
+              onChange={() => changeLanguage(lang === "en" ? "ar" : "en")}
             />
             <span className={style.slider}></span>
           </label>
-          <span className={style.langLabel} style={{color: '#fff' }}>{lang === 'en' ? 'EN' : 'عربي'}</span>
+          <span className={style.langLabel}>
+            {lang === "en" ? "EN" : "عربي"}
+          </span>
         </div>
 
+        {/* HAMBURGER */}
         <div className={style.icon}>
-          <MenuIcon onClick={handleClick1} fontSize="large" />
+          <MenuIcon fontSize="large" onClick={openSidebar} />
         </div>
       </div>
 
-      {/* SIDEBAR */}
-      <div ref={sidebarRef} id="sideBar" className={style.sideBar}>
+      {/* ================= SIDEBAR ================= */}
+      <div
+        ref={sidebarRef}
+        className={`${style.sideBar} ${sidebarOpen ? style.open : ""}`}
+      >
         <div className={style.cross}>
-          <CloseIcon onClick={handleClose} fontSize="medium" />
+          <CloseIcon onClick={closeSidebar} />
         </div>
 
-        <List className={style.sideBarList} component="nav">
-          {NAV_ROUTE_LINKS.map((val, index) => (
+        <List className={style.sideBarList}>
+          {NAV_ROUTE_LINKS.map((val, index) =>
             !val.havingNestedRoute ? (
-              <ListItemButton key={index}
-                disabled={val.isDisable}
-                style={{
-                  opacity: val.isDisable ? 0.5 : 1,
-                  cursor: val.isDisable ? "not-allowed" : "pointer"
-                }}
-              >
+              <ListItemButton key={index} disabled={val.isDisable}>
                 <ListItemText>
                   {val.isDisable ? (
-                    <div style={{ color: "#777" }}>{val.text}</div>
+                    <span style={{ color: "#777" }}>{val.text}</span>
                   ) : (
-                    <Link to={val.to}>
-                      <div className={`${location.pathname === val.to && style.activeClass}`}>
+                    <Link to={val.to} onClick={closeSidebar}>
+                      <div
+                        className={
+                          location.pathname === val.to
+                            ? style.activeClass
+                            : ""
+                        }
+                      >
                         {val.text}
                       </div>
                     </Link>
@@ -195,35 +191,44 @@ const Navbar = () => {
             ) : (
               <React.Fragment key={index}>
                 <ListItemButton
-                  onClick={() => !val.isDisable && handleClick2(index, val.nestedLinks)}
                   disabled={val.isDisable}
-                  style={{
-                    opacity: val.isDisable ? 0.5 : 1,
-                    cursor: val.isDisable ? "not-allowed" : "pointer"
-                  }}
+                  onClick={() =>
+                    !val.isDisable &&
+                    handleSidebarAccordion(index, val.nestedLinks)
+                  }
                 >
                   <ListItemText>
-                    <div className={`${location.pathname === val.to && style.activeClass}`}>
+                    <div
+                      className={
+                        location.pathname === val.to
+                          ? style.activeClass
+                          : ""
+                      }
+                    >
                       {val.text}
                     </div>
                   </ListItemText>
 
-                  {!val.isDisable && (
-                    openSidebarIndex === index ? (
-                      <ExpandLess sx={{ mr: 3 }} />
-                    ) : (
-                      <ExpandMore sx={{ mr: 3 }} />
-                    )
+                  {openSidebarIndex === index ? (
+                    <ExpandLess />
+                  ) : (
+                    <ExpandMore />
                   )}
                 </ListItemButton>
 
-                <Collapse in={openSidebarIndex === index} timeout="auto" unmountOnExit>
+                <Collapse in={openSidebarIndex === index}>
                   <List component="div" disablePadding>
                     {nestedLinks.map((link, i) => (
                       <ListItemButton key={i} sx={{ pl: 4 }}>
                         <ListItemText>
-                          <Link to={link.to}>
-                            <div className={`${location.pathname === link.to && style.activeClass}`}>
+                          <Link to={link.to} onClick={closeSidebar}>
+                            <div
+                              className={
+                                location.pathname === link.to
+                                  ? style.activeClass
+                                  : ""
+                              }
+                            >
                               {link.text}
                             </div>
                           </Link>
@@ -234,16 +239,17 @@ const Navbar = () => {
                 </Collapse>
               </React.Fragment>
             )
-          ))}
+          )}
         </List>
       </div>
 
+      {/* ================= MODAL ================= */}
       {openFormModal && (
-        <DialogModal open={openFormModal} onClose={handleModalFormClose} title="">
+        <DialogModal open={openFormModal} onClose={() => setOpenFormModal(false)}>
           <FormComponent />
         </DialogModal>
       )}
-    </div>
+    </>
   );
 };
 
