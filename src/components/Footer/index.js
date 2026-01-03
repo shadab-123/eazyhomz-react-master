@@ -95,7 +95,7 @@ const Footer = () => {
               <span></span>
               <Link to={"https://www.instagram.com/eazyhomz/?igsh=MWF0MzdnaGYwNGQ2bA%3D%3D"} target="blank"><img src="/assets/images/insta.svg" alt="insta" /></Link>
               &nbsp;&nbsp;
-              <Link to={"https://wa.me/918376091234"} target="blank"><img src="/assets/images/whatsapp.svg" alt="whatsapp" /></Link>
+              <Link to={"https://wa.me/971563163635"} target="blank"><img src="/assets/images/whatsapp.svg" alt="whatsapp" /></Link>
             </div>
           </div>
         </div>
