@@ -35,9 +35,11 @@ const Dashboard = () => {
         <div className='hero-image'>
           <div className='hero-image-heading'>
             <div className='hero-heading'>
-              <h1>Dream • <span className="orange-gradient">Design</span> • Build</h1>
-              <p className="hero-subheading">{t('DASHBOARD_DATA.HERO_SECTION.SUBHEADING')}</p>
-              <ButtonComponent text={t("GET_FREE_ESTIMATE")} onClick={handleModalFormOpen} className="hero-cta-button" />
+              <h1>Dream</h1>
+              <h1>Design</h1> 
+              <h1>Build</h1>
+              {/* <p className="hero-subheading">{t('DASHBOARD_DATA.HERO_SECTION.SUBHEADING')}</p> */}
+              {/* <ButtonComponent text={t("GET_FREE_ESTIMATE")} onClick={handleModalFormOpen} className="hero-cta-button" /> */}
             </div>
           </div>
           <div className='hero-image-form'>

@@ -1,5 +1,5 @@
 .form {
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -11,41 +11,41 @@
 
     .custom-placeholder::placeholder {
         font-size: 0.9rem;
-        color:white;
+        color:black;
     }
 
     // Material-UI TextField input text color
     .MuiInputBase-input {
-        color: white !important;
+        color: black !important;
     }
 
     // MuiPhoneNumber input text color
     .MuiPhoneNumber-flagButton {
-        color: white;
+        color: black;
     }
 
     .MuiPhoneNumber-root .MuiInputBase-input {
-        color: white !important;
+        color: black !important;
     }
 
     // Ensure all input elements have white text
     input {
-        color: white !important;
+        color: black !important;
     }
 
     // TextField label color (if visible)
     .MuiInputLabel-root {
-        color: white !important;
+        color: black !important;
     }
 
     // TextField underline color
     .MuiInput-underline:before,
     .MuiInput-underline:after {
-        border-bottom-color: white !important;
+        border-bottom-color: black !important;
     }
 
     .MuiInput-underline:hover:not(.Mui-disabled):before {
-        border-bottom-color: white !important;
+        border-bottom-color: black !important;
     }
 
     .mobile-number-field {
@@ -66,16 +66,16 @@
 
             option {
                 padding: 0.5rem;
-                background-color: white;
+                background-color: black;
                 color: #1ec40f;
             }
 
             option:hover {
-                background-color: #e6e6e6;
+                background-color: black;
             }
 
             option:checked {
-                background-color: #d9d9d9;
+                background-color: black;
                 color: #692525;
             }
         }
