@@ -13,9 +13,9 @@ const Layout = ({
     <>
       <Navbar />
       <div className='layout-container' >
-        <div className='breadcrum-language'>
+        {/* <div className='breadcrum-language'>
           <Breadcrumbs />
-        </div>
+        </div> */}
 
         <div className='layout' >
           {children}

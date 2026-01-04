@@ -103,8 +103,10 @@ const Navbar = () => {
                 {val.isDisable ? (
                   <div style={{ color: "#999" }}>{val.text}</div>
                 ) : (
-                  <NavLink to={val.to}>
-                    <div>{val.text}</div>
+                  <NavLink to={val.to} style={{ textDecoration: "none" }}>
+                    <div>
+                    {val.text}
+                  </div>
                   </NavLink>
                 )}
               </li>
@@ -119,7 +121,7 @@ const Navbar = () => {
                     : style.navItem
                 }
               >
-                <NavLink to={val.to}>
+                <NavLink to={val.to} style={{ textDecoration: "none" }}>
                   <div>
                     {val.text} <span className={style.arrow} />
                   </div>
@@ -136,7 +138,7 @@ const Navbar = () => {
         {/* LANGUAGE TOGGLE */}
         <div className={style.languageToggle}>
           <span className={style.langLabel}>
-            {lang === "en" ? "عربي" : "EN"}
+            عربي
           </span>
           <label className={style.toggleSwitch}>
             <input
@@ -147,7 +149,7 @@ const Navbar = () => {
             <span className={style.slider}></span>
           </label>
           <span className={style.langLabel}>
-            {lang === "en" ? "EN" : "عربي"}
+            EN
           </span>
         </div>
 

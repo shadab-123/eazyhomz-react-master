@@ -10,31 +10,7 @@ const Landscape = () => {
   const LANDSCAPE_DATA = LANDSCAPE_DATAS();
   return (
     <Layout>
-      <div className="landscape">
-        {/* <FormComponent/> */}
-        <div className='hero-image'>
-          <div className='blank'></div>
-        </div>
-        <h1 className='heading'>{LANDSCAPE_DATA.HEADING}</h1>
-        <p className='small-heading'>{LANDSCAPE_DATA.SUB_HEADING}</p>
-        <Grid container rowGap={1}>
-          {
-            LANDSCAPE_DATA.LANDSCAPE_DATA_CARD_DATA.map((data, index) => {
-              return (
-                <CategoryCard
-                  key={data.id}
-                  id={data.id}
-                  category={data.category}
-                  logoPath={data.logoPath}
-                  text={data.text}
-                  buttonText={data.buttonText}
-                  isDesignIdea={true}
-                />
-              )
-            })
-          }
-        </Grid>
-      </div>
+      <img src='/assets/coming-soon-1.jpg' style={{width:'100%',height:'100%'}}/>
     </Layout>
   )
 }

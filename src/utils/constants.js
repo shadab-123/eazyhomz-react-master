@@ -1,6 +1,5 @@
 export const ROUTES = {
   DASHBOARD: '/',
-  INTERIOR: '/interior',
   BEDROOM_IDEAS: '/bedroom_ideas',
   KITCHEN_IDEAS: '/kitchen_ideas',
   BATHROOM_IDEAS: '/bathroom_ideas',
@@ -12,7 +11,6 @@ export const ROUTES = {
   BEDROOM: '/bedroom',
   BATHROOM: '/bathroom',
   FURNITURE_BY_EASYHOMEZ: '/furniture_by_easyhomez',
-  E_MODULAR:'/e_modular',
   BEDROOM_DETAILS: '/bedroom_details',
   KITCHEN_DETAILS: '/kitchen_details',
   BATHROOM_DETAILS: '/bathroom_details',
