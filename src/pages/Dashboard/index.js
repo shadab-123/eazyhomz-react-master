@@ -42,6 +42,18 @@ const Dashboard = () => {
               {/* <ButtonComponent text={t("GET_FREE_ESTIMATE")} onClick={handleModalFormOpen} className="hero-cta-button" /> */}
             </div>
           </div>
+          <a
+            href="https://wa.me/971563163635"
+            class="whatsapp-fixed"
+            target="_blank"
+            aria-label="Chat on WhatsApp"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp"
+            />
+          </a>
+
           <div className='hero-image-form'>
             <div className='esimation-form'>
               <FormComponent />
