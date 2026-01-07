@@ -22,6 +22,11 @@ const Dashboard = () => {
   const cardData = Array.isArray(t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true })) 
     ? t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true }) 
     : [];
+  // WHY US data (duplicate for seamless loop)
+  const whyUsData = Array.isArray(t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }))
+    ? t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true })
+    : [];
+  const whyUsLoop = [...whyUsData, ...whyUsData]; // duplicate so animation can loop
   const handleModalFormOpen = () => {
     setOpenFormModal(true)
   }
@@ -61,25 +66,20 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="estimationContainer">
-          <div className='tab-mobile-view-only text-center'><ButtonComponent text={"Get Free Estimate"} onClick={handleModalFormOpen} /></div>
+          <div className='tab-mobile-view-only text-center'><ButtonComponent className="simple-button" text={"Get Free Estimate"} onClick={handleModalFormOpen} /></div>
           <div className='why-us'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
-            <div className='why-us-card'>
-              <Grid classNam="grid" container spacing={3}>
-                {
-                  (Array.isArray(t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true })) 
-                    ? t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }) 
-                    : []).map((data) => {
-                    return (
-                      <WhyUsCard
-                        key={data.id}
-                        logoPath={data.logoPath}
-                        text={data.text}
-                      />
-                    )
-                  })
-                }
-              </Grid>
+            <div className='why-us-card' aria-hidden={whyUsData.length === 0 ? "true" : "false"}>
+              <div className='why-us-track'>
+                {whyUsLoop.map((data, idx) => (
+                  <div className='why-us-card-wrapper' key={`${data.id || idx}-${idx}`}>
+                    <WhyUsCard
+                      logoPath={data.logoPath}
+                      text={data.text}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className='home-design-made-easy'>
@@ -93,7 +93,7 @@ const Dashboard = () => {
                 )
               })
             }
-            <div className='text-center'><ButtonComponent onClick={handleModalFormOpen} text={t('DASHBOARD_DATA.HOME_DESIGN_DATA.BUTTON_TEXT')} /></div>
+            <div className='text-center'><ButtonComponent className="simple-button" onClick={handleModalFormOpen} text={t('DASHBOARD_DATA.HOME_DESIGN_DATA.BUTTON_TEXT')} /></div>
           </div>
           <div className='interior-needs'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.HEADING')}</h1>
