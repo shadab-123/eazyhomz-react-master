@@ -164,7 +164,7 @@ const Navbar = () => {
         ref={sidebarRef}
         className={`${style.sideBar} ${sidebarOpen ? style.open : ""}`}
       >
-        <div className={style.cross}>
+        <div className={style.cross} style={{ zIndex: 9999 }}>
           <CloseIcon onClick={closeSidebar} />
         </div>
 

@@ -123,6 +123,13 @@ export const NAV_ROUTE_LINK = () => {
             havingNestedRoute: false,
             isDisable:false
         },
+        {
+            text: t('NAV_ROUTE_LINKS.ABOUT'),
+            to: ROUTES.BLOG,
+            nestedLinks: [],
+            havingNestedRoute: false,
+            isDisable:false
+        },
         // {
         //     text: t('NAV_ROUTE_LINKS.JOIN_US'),
         //     to: ROUTES.BATHROOM,
