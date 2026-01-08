@@ -46,7 +46,7 @@ $tablet: 1024px;
     }
 
     @include respond($tablet) {
-      margin: 1rem 8rem;
+      margin: 1rem 5rem;
     }
   }
 }
@@ -184,7 +184,9 @@ $tablet: 1024px;
    Why Us (Merged)
 ================================ */
 .why-us {
-  padding: 2rem 0;
+  transform: scale(0.9); /* scale down by 30% (70% of original size) */
+  transform-origin: center; /* scale from center */
+  padding: 3rem 0;
   .text-center { margin-bottom: 1rem; }
 
   .why-us-card {
@@ -200,7 +202,7 @@ $tablet: 1024px;
     animation: scroll-left 15s linear infinite; /* automatic horizontal scroll */
     will-change: transform;
     padding: 0.5rem 0;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
 
   .why-us-card-wrapper {
@@ -337,4 +339,20 @@ $tablet: 1024px;
       }
     }
   }
+}
+
+.interior-needs {
+  transform: scale(0.9); /* scale down by 30% (70% of original size) */
+  transform-origin: center; /* scale from center */
+}
+
+.design-areas-in-dashboard{
+  transform: scale(0.9); /* scale down by 30% (70% of original size) */
+  transform-origin: center; /* scale from center */
+  margin-top: 2%;
+}
+
+.estimation-section {
+  transform: scale(0.9); /* scale down by 30% to align with other sections */
+  transform-origin: center;
 }

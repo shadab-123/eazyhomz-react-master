@@ -85,14 +85,13 @@
     "HOME_DESIGN_DATA": {
       "HEADING": "Home Design Made Eazy",
       "SUB_HEADING": [
-        "At Eazyhomz, we specialize in delivering exceptional Architecture, Interior, and Landscape Design services to clients across the globe. Our team of expert designers and architects brings a unique blend of creativity, functionality, and innovation to every project, ensuring that your vision becomes a reality.",
-        "Whether it's designing a stunning architectural masterpiece, creating an inspiring and functional interior, or crafting beautiful outdoor landscapes, we are committed to making home and space design easy and accessible."
+        "At Eazyhomz, we specialize in delivering exceptional Architecture, Interior, and Landscape Design services to clients across the globe. Our team of expert designers and architects brings a unique blend of creativity, functionality, and innovation to every project, ensuring that your vision becomes a reality. Whether it's designing a stunning architectural masterpiece, creating an inspiring and functional interior, or crafting beautiful outdoor landscapes, we are committed to making home and space design easy and accessible."
       ],
       "BUTTON_TEXT": "Book a free design session"
     },
     "INTERIOR_NEEDS": {
       "HEADING": "One stop solution for all your home design needs​",
-      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver a seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior, or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence.",
+      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver a seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior, or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence — tailored to your lifestyle and aspirations.",
       "CARD_SLIDER_DATA": [
         {
           "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-1.jpg",
@@ -234,7 +233,7 @@
     },
     "ESTIMATION_SECTION": {
       "HEADING": "Get an estimate for your Project​",
-      "SUB_HEADING": "Calculate the approximate cost of doing up your project.",
+      "SUB_HEADING": "Calculate the approximate cost of doing up your project with confidence, backed by expert insights and transparent, reliable estimates you can trust.",
       "ESTIMATION_DATA": [
         {
           "id": "1",

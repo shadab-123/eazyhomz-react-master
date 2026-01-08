@@ -82,7 +82,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className='home-design-made-easy'>
+          {/* <div className='home-design-made-easy'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.HOME_DESIGN_DATA.HEADING')}</h1>
             {
               (Array.isArray(t('DASHBOARD_DATA.HOME_DESIGN_DATA.SUB_HEADING', {returnObjects: true})) 
@@ -94,7 +94,7 @@ const Dashboard = () => {
               })
             }
             <div className='text-center'><ButtonComponent className="simple-button" onClick={handleModalFormOpen} text={t('DASHBOARD_DATA.HOME_DESIGN_DATA.BUTTON_TEXT')} /></div>
-          </div>
+          </div> */}
           <div className='interior-needs'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.HEADING')}</h1>
             <p className='text-center sub-text'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.SUB_HEADING')}</p>
@@ -106,20 +106,20 @@ const Dashboard = () => {
           <div className='design-areas-in-dashboard'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.HEADING')}</h1>
             <p className='text-center sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
-            <Grid sx={{ margin: "1rem" }} container spacing={2}>
-              <Grid item xs={12} sm={12} md={12} lg={6}>
+            <Grid sx={{ margin: "1rem" }} container spacing={4}>
+              <Grid item xs={12} sm={12} md={12} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_1.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_1.IMAGE_SLIDER_HEADING')} />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={6}>
+              <Grid item xs={12} sm={12} md={12} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_2.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_2.IMAGE_SLIDER_HEADING')} />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={6}>
+              <Grid item xs={12} sm={12} md={12} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_3.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_3.IMAGE_SLIDER_HEADING')} />
               </Grid>
               {/* <Grid item xs={12} sm={12} md={12} lg={6}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_SLIDER_HEADING')} />
               </Grid> */}
-              <Grid item xs={12} sm={12} md={12} lg={6}>
+              <Grid item xs={12} sm={12} md={12} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_SLIDER_HEADING')} />
               </Grid>
               {/* <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -127,6 +127,7 @@ const Dashboard = () => {
               </Grid> */}
             </Grid>
           </div>
+
           <div className='estimation-section'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.HEADING')}</h1>
             <p className='text-center sub-text'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.SUB_HEADING')}</p>
@@ -148,7 +149,8 @@ const Dashboard = () => {
               }
             </Grid>
           </div>
-          <div className='steps'>
+
+          {/* <div className='steps'>
             <h1 className='text-center steps-heading'>{t('DASHBOARD_DATA.STEPS_SECTION.HEADING')}</h1>
             <p className='text-center sub-text'>{t('DASHBOARD_DATA.STEPS_SECTION.SUB_HEADING')}</p>
             <div className='step-cards'>
@@ -166,7 +168,7 @@ const Dashboard = () => {
                 })
               }
             </div>
-          </div>
+          </div> */}
         </div>
         <Testimonials />
       </div>
