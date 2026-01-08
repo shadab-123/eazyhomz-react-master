@@ -189,7 +189,7 @@ $tablet: 1024px;
 
   .why-us-card {
     width: 100%;
-    overflow: hidden; /* hide overflow for seamless animation */
+    overflow: auto; /* hide overflow for seamless animation */
   }
 
   .why-us-track {
@@ -197,7 +197,7 @@ $tablet: 1024px;
     flex-wrap: nowrap;
     gap: 1rem;
     align-items: stretch;
-    animation: scroll-left 20s linear infinite; /* automatic horizontal scroll */
+    animation: scroll-left 15s linear infinite; /* automatic horizontal scroll */
     will-change: transform;
     padding: 0.5rem 0;
     margin-bottom: 2%;
@@ -227,7 +227,7 @@ $tablet: 1024px;
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .why-us-card-wrapper { min-width: 140px; max-width: 220px; }
-  .why-us-track { gap: 0.5rem; animation-duration: 15s; }
+  .why-us-track { gap: 0.5rem; animation-duration: 4s !important; }
 }
 
 /* Keyframe for seamless loop (translates by 50% since cards are duplicated) */

@@ -8,6 +8,10 @@
   box-sizing: border-box;
   font-family: 'Poppins'
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   overflow-x: hidden;
@@ -19,7 +23,7 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-scrollbar-width: none;
+/* scrollbar-width: none; */
 
 /* body.rtl {
   direction: rtl;
