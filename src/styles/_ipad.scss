@@ -1,0 +1,256 @@
+/* iPad-specific responsive adjustments
+   Targets widths between 768px and 1023px (typical iPad portrait/landscape)
+*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Base scaling */
+  html {
+    font-size: 15px; /* slightly larger base font for tablets */
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Navbar tweaks */
+  .container {
+    height: 80px;
+    padding: 8px 20px;
+
+    .logo {
+      width: 18%;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      a h1 {
+        font-size: 1.4rem;
+        line-height: 80px;
+      }
+    }
+  }
+
+  /* Sidebar width for tablets */
+  .sideBar {
+    width: 50%;
+  }
+
+  /* Hero / category adjustments */
+  .category-container {
+    padding-bottom: 50px;
+
+    .hero-image {
+      min-height: 480px;
+      flex-direction: row;
+
+      .interior-design {
+        padding: 1.5rem;
+
+        p {
+          font-size: 1.9rem;
+        }
+
+        button {
+          font-size: 18px;
+          padding: 16px 40px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .heading {
+      font-size: 1.9rem;
+      margin: 3% 8% 0 8%;
+    }
+
+    .small-heading {
+      font-size: 1.05rem;
+      margin: 0 8% 0 8%;
+      text-align: justify;
+    }
+  }
+
+  /* Category details: show two-column on tablets */
+  .category-details-container {
+    flex-direction: row;
+    min-height: 65vh;
+    height: auto;
+
+    .details-left,
+    .details-right {
+      width: 50%;
+      padding: 1.25rem;
+    }
+
+    .details-right {
+      .slick-slider {
+        height: 100%;
+
+        .slick-slide .slider-child .home-img {
+          aspect-ratio: 16/11;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* Generic image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Buttons and inputs: comfortable tappable sizes */
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    padding: 12px 18px;
+  }
+
+  /* ==========================
+     Navbar specific tweaks
+     ========================== */
+  .container {
+    .listItem {
+      gap: 1.25rem;
+
+      .navItem a div {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.2rem;
+      }
+    }
+
+    .logo img {
+      width: 72px;
+      height: 72px;
+    }
+
+    .languageToggle .langLabel {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* ==========================
+     Dashboard specific tweaks
+     ========================== */
+  /* Dashboard uses generic `.container` and `.hero-image` classes */
+  .container {
+    h1 {
+      font-size: 1.9rem;
+    }
+
+    .hero-image {
+      height: 72vh; /* keep hero prominent but fit on iPad */
+      &-heading {
+        padding-left: 4%;
+        font-size: 1.6rem;
+      }
+
+      &-form {
+        margin-right: 4%;
+        max-width: 420px;
+        width: 40%;
+      }
+    }
+
+    /* Why-us: show slightly larger cards on tablets */
+    .why-us {
+      transform: none;
+
+      .why-us-card-wrapper {
+        min-width: 220px;
+        max-width: 300px;
+      }
+    }
+
+    /* Estimation / Cards */
+    .estimation-section,
+    .interior-needs,
+    .design-areas-in-dashboard {
+      transform: none;
+    }
+
+    .card-slider-container {
+      padding: 0 1rem;
+    }
+  }
+
+  /* ==========================
+     Dashboard child components
+     EstimationCard, WhyUsCard, Sliders
+     ========================== */
+  .box {
+    padding: 1.25rem;
+
+    .heading {
+      font-size: 1.05rem;
+    }
+
+    .sub-text {
+      font-size: 0.95rem;
+    }
+
+    button {
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  .why-us-card-box {
+    img {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Sliders: ensure images fit and show better preview */
+  .slick-slider {
+    .slick-slide {
+      .slider-child {
+        .home-img {
+          aspect-ratio: 16/10;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* ==========================
+     Footer tweaks
+     ========================== */
+  .container {
+    &.footer, .footer, /* in case module scoping differs */
+    .footer-container {
+      padding: 18px 28px;
+    }
+
+    /* target footer structure used in module: .content .about/.address/.signUp */
+    .content {
+      padding: 1.5rem;
+      gap: 1.25rem;
+
+      .about,
+      .address,
+      .signUp {
+        width: 32%;
+        min-width: 180px;
+      }
+
+      .signUp {
+        .button {
+          padding: 0.6rem 1rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}

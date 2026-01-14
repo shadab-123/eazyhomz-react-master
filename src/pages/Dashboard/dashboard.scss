@@ -38,7 +38,7 @@ $tablet: 1024px;
     color: #7a7a7a;
     line-height: 1.6;
     margin: 1rem;
-    text-align: center;
+    text-align: left;
 
     @include respond($mobile) {
       margin: 1rem 4rem;
@@ -78,6 +78,22 @@ $tablet: 1024px;
 
   @include respond($tablet) {
     height: 100vh;
+  }
+
+  /* iPad (between mobile and desktop) tweaks */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 76vh;
+
+    &-heading {
+      padding-left: 5%;
+      font-size: 1.8rem;
+    }
+
+    &-form {
+      max-width: 460px;
+      width: 42%;
+      margin-right: 4%;
+    }
   }
 
   &-heading {
@@ -151,8 +167,8 @@ $tablet: 1024px;
   }
 
   .simple-button {
-    background-color: antiquewhite;
-    color: #333;
+    background-color: #EF4136;
+    color: white;
     border: 1px solid #ccc;
     padding: 10px 20px;
     font-size: 16px;
@@ -186,31 +202,32 @@ $tablet: 1024px;
 .why-us {
   transform: scale(0.9); /* scale down by 30% (70% of original size) */
   transform-origin: center; /* scale from center */
-  padding: 3rem 0;
   .text-center { margin-bottom: 1rem; }
 
+  /* container hides overflow so the scrolling track can loop seamlessly */
   .why-us-card {
     width: 100%;
-    overflow: auto; /* hide overflow for seamless animation */
+    overflow: hidden;
   }
 
+  /* Use margin on items instead of gap to keep duplicated sequence spacing identical */
   .why-us-track {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
     align-items: stretch;
-    animation: scroll-left 15s linear infinite; /* automatic horizontal scroll */
-    will-change: transform;
     padding: 0.5rem 0;
-    margin-bottom: 1%;
+    will-change: transform;
+    /* duration & width are set dynamically via inline CSS vars for exact seamless loop */
+    animation: scroll-left var(--scroll-duration, 20s) linear infinite;
   }
 
-  .why-us-card-wrapper {
+  .why-us-track > .why-us-card-wrapper {
     flex: 0 0 auto;
     min-width: 200px;
     max-width: 320px;
     display: flex;
     align-items: stretch;
+    margin-right: 1rem; /* consistent spacing between items */
   }
 
   .why-us-card-wrapper > * {
@@ -221,21 +238,18 @@ $tablet: 1024px;
   }
 }
 
-/* Pause on hover */
-.why-us-card:hover .why-us-track {
-  animation-play-state: paused;
-}
+/* Keep continuous scroll - do not pause on hover to avoid breaking loop */
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-  .why-us-card-wrapper { min-width: 140px; max-width: 220px; }
-  .why-us-track { gap: 0.5rem; animation-duration: 4s !important; }
+  .why-us-card-wrapper { min-width: 140px; max-width: 220px; margin-right: 0.5rem; }
+  .why-us-track { animation-duration: 8s !important; }
 }
 
-/* Keyframe for seamless loop (translates by 50% since cards are duplicated) */
+/* Keyframe for seamless loop: translate by measured width (set in --scroll-width) */
 @keyframes scroll-left {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(calc(-1 * var(--scroll-width, 50%))); }
 }
 
 /* ==============================
@@ -303,7 +317,7 @@ $tablet: 1024px;
 }
 
 .esimation-form{
-  background: antiquewhite;
+  background: white;
 }
 .hero-heading{
   margin-top: 25%;
@@ -347,9 +361,8 @@ $tablet: 1024px;
 }
 
 .design-areas-in-dashboard{
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
+  transform: scale(0.95); /* scale down by 30% (70% of original size) */
   transform-origin: center; /* scale from center */
-  margin-top: 2%;
 }
 
 .estimation-section {

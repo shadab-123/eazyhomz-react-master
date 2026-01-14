@@ -83,6 +83,20 @@
   overflow: hidden;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slideshow-container {
+    height: 520px; /* slightly taller on tablets for better visual */
+  }
+
+  .text-container {
+    font-size: 2.2rem;
+  }
+
+  .slideshow-image {
+    object-fit: cover;
+  }
+}
+
 .slideshow-content {
   position: relative;
   border-radius: 1rem;

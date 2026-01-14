@@ -257,6 +257,53 @@
   }
 }
 
+/* Tablet specific (iPad) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    height: 78px;
+    padding: 6px 18px;
+
+    .logo {
+      width: 20%;
+
+      img {
+        width: 76px;
+        height: 76px;
+      }
+
+      a h1 {
+        font-size: 1.35rem;
+        line-height: 78px;
+      }
+    }
+
+    .listItem {
+      gap: 1.2rem;
+
+      .navItem a div {
+        font-size: 0.95rem;
+        padding: 0.3rem;
+      }
+    }
+
+    .languageToggle {
+      width: 28%;
+
+      .langLabel {
+        font-size: 0.85rem;
+      }
+    }
+
+    .icon {
+      display: none; /* hide mobile icon on iPad */
+    }
+  }
+
+  .sideBar {
+    width: 48%;
+  }
+}
+
 /* =======================
    LARGE DESKTOP
 ======================= */

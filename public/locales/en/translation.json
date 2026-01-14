@@ -91,12 +91,12 @@
     },
     "INTERIOR_NEEDS": {
       "HEADING": "One stop solution for all your home design needs​",
-      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver a seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior, or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence — tailored to your lifestyle and aspirations.",
+      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior design or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence — tailored to your lifestyle and aspirations.",
       "CARD_SLIDER_DATA": [
         {
           "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-1.jpg",
           "HEADING": "Architecture Design",
-          "SUB_HEADING": "Design that transform spaces and bring your vision to life",
+          "SUB_HEADING": "Design that transform your vision to life",
           "BUTTON_TEXT": "View More"
         },
         {
@@ -121,7 +121,7 @@
     },
     "DESIGN_INSPIRATION": {
       "HEADING": "Home design inspiration​",
-      "SUB_HEADING": "From bold architectural structures to serene, functional interiors and breath-taking landscapes, our designs are tailored to create spaces that inspire, elevate, and transform. Let your vision come to life with Eazyhomz, where every detail is crafted to perfection, making your space a true reflection of your lifestyle.",
+      "SUB_HEADING": "From bold architectural structures to serene, functional interior design and breath-taking landscapes, our designs are tailored to create spaces that inspire, elevate, and transform. Let your vision come to life with Eazyhomz, where every detail is crafted to perfection, making your space a true reflection of your lifestyle.",
       "IMAGE_SLIDER_DATA_1": {
         "IMAGE_PATHS": [
           "/assets/images/living%20room/Living%20Room%20Design%201.jpg",

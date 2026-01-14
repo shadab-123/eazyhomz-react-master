@@ -37,4 +37,22 @@
         color: #f0f0f0;
     }
     }
+    
+    @media (min-width: 768px) and (max-width: 1023px) {
+      padding: 1.5rem;
+
+      .heading {
+        font-size: 1.05rem;
+      }
+
+      .sub-text {
+        font-size: 0.95rem;
+        height: auto;
+      }
+
+      button {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.95rem;
+      }
+    }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Layout from '../../components/Layout'
 import './dashboard.scss'
 
@@ -27,6 +27,26 @@ const Dashboard = () => {
     ? t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true })
     : [];
   const whyUsLoop = [...whyUsData, ...whyUsData]; // duplicate so animation can loop
+  const whyUsTrackRef = useRef(null);
+
+  useEffect(() => {
+    const track = whyUsTrackRef.current;
+    if (!track) return;
+    const children = Array.from(track.children || []);
+    const originalCount = Math.floor(children.length / 2) || children.length;
+    let width = 0;
+    for (let i = 0; i < originalCount; i++) {
+      const el = children[i];
+      const style = window.getComputedStyle(el);
+      const marginRight = parseFloat(style.marginRight) || 0;
+      width += el.offsetWidth + marginRight;
+    }
+    // set CSS vars used by SCSS animation
+    track.style.setProperty('--scroll-width', `${width}px`);
+    const speed = 80; // pixels per second
+    const durationSec = Math.max(10, Math.round(width / speed));
+    track.style.setProperty('--scroll-duration', `${durationSec}s`);
+  }, [whyUsData.length]);
   const handleModalFormOpen = () => {
     setOpenFormModal(true)
   }
@@ -107,19 +127,19 @@ const Dashboard = () => {
             <h1 className='text-center'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.HEADING')}</h1>
             <p className='text-center sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
             <Grid sx={{ margin: "1rem" }} container spacing={4}>
-              <Grid item xs={12} sm={12} md={12} lg={3}>
+              <Grid item xs={12} sm={6} md={6} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_1.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_1.IMAGE_SLIDER_HEADING')} />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={3}>
+              <Grid item xs={12} sm={6} md={6} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_2.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_2.IMAGE_SLIDER_HEADING')} />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={3}>
+              <Grid item xs={12} sm={6} md={6} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_3.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_3.IMAGE_SLIDER_HEADING')} />
               </Grid>
               {/* <Grid item xs={12} sm={12} md={12} lg={6}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_SLIDER_HEADING')} />
               </Grid> */}
-              <Grid item xs={12} sm={12} md={12} lg={3}>
+              <Grid item xs={12} sm={6} md={6} lg={3}>
                 <ImageSlider imagePaths={DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_PATHS} heading={t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_SLIDER_HEADING')} />
               </Grid>
               {/* <Grid item xs={12} sm={12} md={12} lg={6}>
