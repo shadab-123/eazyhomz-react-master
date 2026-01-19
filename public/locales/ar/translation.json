@@ -377,7 +377,27 @@
   },
   "BOOK_FREE_SESSIONS": "احجز جلسة تصميم مجانية",
   "GET_FREE_ESTIMATE": "الحصول على تقدير مجاني",
-  "GLOBAL_KEYWORDS": {
+  "HOW_IT_WORKS": {
+    "HEADING": "كيف يعمل",
+    "STEPS": [
+      {
+        "TITLE": "التقابس مع مصمم"
+      },
+      {
+        "TITLE": "احجز EazyHomz"
+      },
+      {
+        "TITLE": "بدء التنفيذ"
+      },
+      {
+        "TITLE": "التركيبات النهائية"
+      },
+      {
+        "TITLE": "الانتقال والاستمتاع!"
+      }
+    ],
+    "BUTTON_TEXT": "احجز استشارة"
+  },  "GLOBAL_KEYWORDS": {
     "BEDROOM": "غرفة النوم",
     "BATHROOM": "الحمام",
     "KITCHEN": "المطبخ",

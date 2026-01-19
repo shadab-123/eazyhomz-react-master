@@ -28,6 +28,8 @@
         text-wrap: wrap;
         padding: 1rem 2rem 2rem 2rem;
     }
+    transform: scale(0.8); /* scale down by 30% (70% of original size) */
+    transform-origin: center; /* scale from center */
 }
 
 

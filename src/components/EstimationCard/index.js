@@ -9,7 +9,7 @@ const EstimationCard = ({ heading, logoPath, text, buttonText, buttonClickEvent 
             <Box className="box">
                 <div className='heading'>{heading} </div>
                 <img src={logoPath} height="100px" width="120px" loading='lazy'/>
-                <p style={{ marginBottom: '2%' }}>{text}</p>
+                <p style={{ marginBottom: '5%', color: 'grey', fontSize: 'smaller' }}>{text}</p>
                 <ButtonComponent onClick={buttonClickEvent} text={buttonText} />
             </Box>
         </Grid>

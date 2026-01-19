@@ -5,6 +5,7 @@ const Testimonials = () => {
   const testimonials = [
     { name: 'John Doe', text: 'Amazing service!', image: 'https://cloudyfoundation.org.uk/wp-content/uploads/2021/01/male.png' },
     { name: 'Jane Smith', text: 'Transformed my home beautifully.', image: 'https://img.freepik.com/premium-photo/young-smiling-woman-ann-avatar-3d-vector-people-character-illustration-cartoon-minimal-style_1240525-12753.jpg' },
+    { name: 'James Carlos', text: 'loved the design!', image: 'https://cloudyfoundation.org.uk/wp-content/uploads/2021/01/male.png' },
   ];
 
   return (
