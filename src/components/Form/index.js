@@ -16,7 +16,6 @@ const countryOptions = [
 
 const FormComponent = () => {
   const { t } = useTranslation();
-  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
   const [isWhatsAppChecked, setIsWhatsAppChecked] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [phoneValue, setPhoneValue] = useState('');
@@ -27,11 +26,6 @@ const FormComponent = () => {
   useEffect(() => {
     emailjs.init('n8BOqYzAfEps7Lw3D');
   }, []);
-
-  const handleCountryChange = (event) => {
-    const selected = countryOptions.find(option => option.value === event.target.value);
-    setSelectedCountry(selected);
-  };
 
   const handleWhatsAppChange = () => {
     setIsWhatsAppChecked(!isWhatsAppChecked);

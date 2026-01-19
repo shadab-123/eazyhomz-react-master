@@ -61,7 +61,7 @@ const Navbar = () => {
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, []);
+  }, [handleOutsideClick]);
 
   useEffect(() => {
     const handleResize = () => {

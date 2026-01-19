@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
 import './layout.scss';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import GoToTop from '../GoToTop';
-import Breadcrumbs from '../BreadCrumb';
 
 const Layout = ({
   children,

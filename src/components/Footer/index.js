@@ -43,6 +43,7 @@ const Footer = () => {
       <div className={style.logo}>
         <Link to={'/'}><img
           src="/assets/images/eazyhomz-logo.png"
+          alt="Eazyhomz Logo"
         />
         </Link>
         <div className={style.heading11}>
