@@ -5,15 +5,6 @@ import { useTranslation } from 'react-i18next';
 import MuiPhoneNumber from 'material-ui-phone-number';
 import emailjs from '@emailjs/browser';
 
-const countryOptions = [
-  { value: 'IN', text: '🇮🇳', label: '🇮🇳 +91', isdCode: '+91' },
-  { value: 'AE', text: '🇦🇪', label: '🇦🇪 +971', isdCode: '+971' }, // Dubai
-  { value: 'SA', text: '🇸🇦', label: '🇸🇦 +966', isdCode: '+966' }, // Saudi Arabia
-  { value: 'EG', text: '🇪🇬', label: '🇪🇬 +20', isdCode: '+20' }, // Egypt
-  { value: 'KW', text: '🇰🇼', label: '🇰🇼 +965', isdCode: '+965' }, // Kuwait
-  // Add more countries as needed
-];
-
 const FormComponent = () => {
   const { t } = useTranslation();
   const [isWhatsAppChecked, setIsWhatsAppChecked] = useState(true);

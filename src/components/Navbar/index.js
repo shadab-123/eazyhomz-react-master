@@ -44,12 +44,6 @@ const Navbar = () => {
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => setSidebarOpen(false);
 
-  const handleOutsideClick = (e) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-      closeSidebar();
-    }
-  };
-
   const handleSidebarAccordion = (index, nested) => {
     setOpenSidebarIndex(openSidebarIndex === index ? null : index);
     setNestedLinks(nested);
@@ -59,9 +53,14 @@ const Navbar = () => {
      EFFECTS
   ========================== */
   useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        closeSidebar();
+      }
+    };
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [handleOutsideClick]);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
