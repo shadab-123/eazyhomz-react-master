@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import AppRoutePages from './routes';
 import { useTranslation } from 'react-i18next';
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   useEffect(() => {
     document.body.classList.toggle('rtl', i18n.language === 'ar');
     document.body.classList.toggle('ltr', i18n.language !== 'ar');

@@ -42,7 +42,7 @@ function CardSlider({ cardData }) {
           cardData.map((data) => {
             return (
               <div className="box-container">
-                <img src={data.IMAGE_PATH} loading="lazy" />
+                <img src={data.IMAGE_PATH} alt={data.HEADING} loading="lazy" />
                 <p className='main-heading'>{data.HEADING}</p>
                 <p className='sub-heading'>{data.SUB_HEADING}</p>
                 <ButtonComponent text={data.BUTTON_TEXT} Icon={<ArrowRightAltIcon />} />

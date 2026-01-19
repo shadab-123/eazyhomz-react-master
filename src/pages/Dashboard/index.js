@@ -67,6 +67,7 @@ const Dashboard = () => {
             href="https://wa.me/971563163635"
             class="whatsapp-fixed"
             target="_blank"
+            rel="noreferrer"
             aria-label="Chat on WhatsApp"
           >
             <img

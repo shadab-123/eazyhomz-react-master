@@ -17,7 +17,7 @@ const CategoryCard = ({ id,category, logoPath, text, buttonText ,isDesignIdea=fa
     return (
         <Grid item xs={12} sm={6} md={4}>
             <Box className="category_box">
-                <img src={logoPath} loading='lazy' />
+                <img src={logoPath} alt={text} loading='lazy' />
                 <p className='text'>{text}</p>
                 {
                     !isDesignIdea ?

@@ -7,7 +7,6 @@ import ButtonComponent from '../../../components/Button';
 import { useTranslation } from 'react-i18next';
 import FormComponent from '../../../components/Form';
 import CloseIcon from '@mui/icons-material/Close';
-import { Tooltip } from '@mui/material';
 
 const LivingAreaDetails = () => {
   const LIVING_AREA_DATA = LIVING_AREA_DATAS();
