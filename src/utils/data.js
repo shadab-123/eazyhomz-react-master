@@ -116,20 +116,8 @@ export const NAV_ROUTE_LINK = () => {
             isDisable:false
         },
 
-        {
-            text: t('NAV_ROUTE_LINKS.BLOG'),
-            to: ROUTES.ARCHITECTURE,
-            nestedLinks: [],
-            havingNestedRoute: false,
-            isDisable:false
-        },
-        {
-            text: t('NAV_ROUTE_LINKS.ABOUT'),
-            to: ROUTES.BLOG,
-            nestedLinks: [],
-            havingNestedRoute: false,
-            isDisable:false
-        },
+
+
         // {
         //     text: t('NAV_ROUTE_LINKS.JOIN_US'),
         //     to: ROUTES.BATHROOM,

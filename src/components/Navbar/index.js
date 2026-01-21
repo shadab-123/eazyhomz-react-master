@@ -134,22 +134,20 @@ const Navbar = () => {
           )}
         </ul>
 
-        {/* LANGUAGE TOGGLE */}
-        <div className={style.languageToggle}>
-          <span className={style.langLabel}>
+        {/* LANGUAGE BUTTONS */}
+        <div className={style.langButtons}>
+          <button
+            className={`${style.langBtn} ${lang === "ar" ? style.active : ""}`}
+            onClick={() => changeLanguage("ar")}
+          >
             عربي
-          </span>
-          <label className={style.toggleSwitch}>
-            <input
-              type="checkbox"
-              checked={lang === "en"}
-              onChange={() => changeLanguage(lang === "en" ? "ar" : "en")}
-            />
-            <span className={style.slider}></span>
-          </label>
-          <span className={style.langLabel}>
+          </button>
+          <button
+            className={`${style.langBtn} ${lang === "en" ? style.active : ""}`}
+            onClick={() => changeLanguage("en")}
+          >
             EN
-          </span>
+          </button>
         </div>
 
         {/* HAMBURGER */}
