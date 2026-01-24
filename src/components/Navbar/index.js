@@ -83,8 +83,8 @@ const Navbar = () => {
         <div className={style.logo}>
           <Link to="/">
             <img src="/assets/images/eazyhomz-logo.png" alt="eazyhomz" />
-            <h1>Eazyhomz</h1>
           </Link>
+          <h1 style={{ paddingTop: "18px", fontWeight: 500, fontSize: "x-large" }}>Eazyhomz</h1>
         </div>
 
         {/* DESKTOP NAV */}
