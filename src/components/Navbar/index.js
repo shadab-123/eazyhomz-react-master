@@ -84,7 +84,7 @@ const Navbar = () => {
           <Link to="/">
             <img src="/assets/images/eazyhomz-logo.png" alt="eazyhomz" />
           </Link>
-          <h1 style={{ paddingTop: "18px", fontWeight: 500, fontSize: "x-large" }}>Eazyhomz</h1>
+          <h1 style={{ paddingTop: "18px", fontWeight: 500, fontSize: "x-large", cursor: "pointer" }}>Eazyhomz</h1>
         </div>
 
         {/* DESKTOP NAV */}

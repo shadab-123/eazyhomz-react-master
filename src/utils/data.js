@@ -124,6 +124,20 @@ export const NAV_ROUTE_LINK = () => {
         //     nestedLinks: [],
         //     havingNestedRoute: false
         // },
+        {
+            text: t('NAV_ROUTE_LINKS.CONTACT_US'),
+            to: ROUTES.CONTACT_US,
+            nestedLinks: [],
+            havingNestedRoute: false,
+            isDisable:false
+        },
+        {
+            text: t('NAV_ROUTE_LINKS.BLOG'),
+            to: ROUTES.BLOG,
+            nestedLinks: [],
+            havingNestedRoute: false,
+            isDisable:false
+        },
     ]
     return NAV_ROUTE_LINKS;
 }

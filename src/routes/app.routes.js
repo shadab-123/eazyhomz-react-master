@@ -24,10 +24,10 @@ const FurnitureByEasyHomez = React.lazy(() => import('../pages/FurnitureByEasyHo
 const EModular = React.lazy(() => import('../pages/EModular'));
 const Architecture = React.lazy(() => import('../pages/Architecture'));
 const Landscape = React.lazy(() => import('../pages/Landscape'));
+const ContactUs = React.lazy(() => import('../pages/ContactUs'));
+const Blog = React.lazy(() => import('../pages/Blog'));
 
 const NotFound = React.lazy(() => import('../pages/404'));
-
-
 export const appRoutes = {
   AUTH_ROUTES: [],
   USER_ROUTES: [
@@ -140,6 +140,16 @@ export const appRoutes = {
       path: ROUTES.BATHROOM_DETAILS,
       exact: true,
       element: <BathroomDetails/>,
+    },
+    {
+      path: ROUTES.CONTACT_US,
+      exact: true,
+      element: <ContactUs/>,
+    },
+    {
+      path: ROUTES.BLOG,
+      exact: true,
+      element: <Blog/>,
     },
   ],
 

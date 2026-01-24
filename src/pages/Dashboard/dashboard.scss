@@ -215,9 +215,6 @@ $tablet: 1024px;
     flex-wrap: nowrap;
     align-items: stretch;
     padding: 0.5rem 0;
-    will-change: transform;
-    /* duration & width are set dynamically via inline CSS vars for exact seamless loop */
-    animation: scroll-left var(--scroll-duration, 20s) linear infinite;
   }
 
   .why-us-track > .why-us-card-wrapper {
@@ -242,13 +239,6 @@ $tablet: 1024px;
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .why-us-card-wrapper { min-width: 140px; max-width: 220px; margin-right: 0.5rem; }
-  .why-us-track { animation-duration: 8s !important; }
-}
-
-/* Keyframe for seamless loop: translate by measured width (set in --scroll-width) */
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-1 * var(--scroll-width, 50%))); }
 }
 
 /* ==============================

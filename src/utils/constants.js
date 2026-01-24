@@ -22,6 +22,8 @@ export const ROUTES = {
   WARDROBE: '/wardrobe',
   ARCHITECTURE: '/architecture',
   LANDSCAPE: '/landscape',
+  CONTACT_US: '/contact_us',
+  BLOG: '/blog',
 };
 
 export const CATEGORY_LIST = [

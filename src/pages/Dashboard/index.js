@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import Layout from '../../components/Layout'
 import './dashboard.scss'
 
@@ -25,27 +25,6 @@ const Dashboard = () => {
   const whyUsData = Array.isArray(t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }))
     ? t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true })
     : [];
-  const whyUsLoop = [...whyUsData, ...whyUsData]; // duplicate so animation can loop
-  const whyUsTrackRef = useRef(null);
-
-  useEffect(() => {
-    const track = whyUsTrackRef.current;
-    if (!track) return;
-    const children = Array.from(track.children || []);
-    const originalCount = Math.floor(children.length / 2) || children.length;
-    let width = 0;
-    for (let i = 0; i < originalCount; i++) {
-      const el = children[i];
-      const style = window.getComputedStyle(el);
-      const marginRight = parseFloat(style.marginRight) || 0;
-      width += el.offsetWidth + marginRight;
-    }
-    // set CSS vars used by SCSS animation
-    track.style.setProperty('--scroll-width', `${width}px`);
-    const speed = 80; // pixels per second
-    const durationSec = Math.max(10, Math.round(width / speed));
-    track.style.setProperty('--scroll-duration', `${durationSec}s`);
-  }, [whyUsData.length]);
   const handleModalFormOpen = () => {
     setOpenFormModal(true)
   }
@@ -90,8 +69,8 @@ const Dashboard = () => {
             <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
             <div className='why-us-card' aria-hidden={whyUsData.length === 0 ? "true" : "false"}>
               <div className='why-us-track'>
-                {whyUsLoop.map((data, idx) => (
-                  <div className='why-us-card-wrapper' key={`${data.id || idx}-${idx}`}>
+                {whyUsData.map((data, idx) => (
+                  <div className='' key={`${data.id || idx}-${idx}`}>
                     <WhyUsCard
                       logoPath={data.logoPath}
                       text={data.text}
