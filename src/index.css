@@ -8,22 +8,33 @@
   box-sizing: border-box;
   font-family: 'Poppins'
 }
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+html {
+  height: 100%;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
 }
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  overflow-y: auto;
 }
 .text-center{
   text-align: center;
 }
+/* Hide scrollbar in Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
+  width: 8px;
   display: none;
 }
-/* scrollbar-width: none; */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 
 /* body.rtl {
   direction: rtl;
