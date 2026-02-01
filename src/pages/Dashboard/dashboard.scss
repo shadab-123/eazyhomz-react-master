@@ -60,7 +60,6 @@ $tablet: 1024px;
   background: url('../../../public/assets/images/EazyHero.jpg') center/cover;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
 
   &::before {
     content: '';
@@ -154,7 +153,6 @@ $tablet: 1024px;
    Estimation Section
 ================================ */
 .estimationContainer {
-  background: #f5f5f5;
   padding: 30px 0 0px;
 
   .tab-mobile-view-only {
@@ -215,6 +213,7 @@ $tablet: 1024px;
     flex-wrap: nowrap;
     align-items: stretch;
     padding: 0.5rem 0;
+    justify-content: space-around;
   }
 
   .why-us-track > .why-us-card-wrapper {
@@ -308,7 +307,8 @@ $tablet: 1024px;
   background: white;
 }
 .hero-heading{
-  margin-top: 25%;
+  margin-top: 40%;
+  margin-left: 20%;
 }
 .home-design-made-easy {
   .text-center {
@@ -343,10 +343,10 @@ $tablet: 1024px;
   }
 }
 
-.interior-needs {
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
-  transform-origin: center; /* scale from center */
-}
+// .interior-needs {
+//   transform: scale(0.9); /* scale down by 30% (70% of original size) */
+//   transform-origin: center; /* scale from center */
+// }
 
 .how-it-works{
   transform: scale(0.9); /* scale down by 30% (70% of original size) */

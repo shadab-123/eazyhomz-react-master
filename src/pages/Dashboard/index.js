@@ -68,7 +68,7 @@ const Dashboard = () => {
           <div className='why-us'>
             <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
             <div className='why-us-card' aria-hidden={whyUsData.length === 0 ? "true" : "false"}>
-              <div className='why-us-track' style={{marginLeft:"15%"}}>
+              <div className='why-us-track'>
                 {whyUsData.map((data, idx) => (
                   <div className='' key={`${data.id || idx}-${idx}`}>
                     <WhyUsCard
