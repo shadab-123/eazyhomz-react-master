@@ -24,14 +24,6 @@ function DesignInspirationSlider() {
     {
       image: DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_PATHS[0],
       title: t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_4.IMAGE_SLIDER_HEADING')
-    },
-    {
-      image: DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_PATHS[0],
-      title: t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_5.IMAGE_SLIDER_HEADING')
-    },
-    {
-      image: DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_6.IMAGE_PATHS[0],
-      title: t('DASHBOARD_DATA.DESIGN_INSPIRATION.IMAGE_SLIDER_DATA_6.IMAGE_SLIDER_HEADING')
     }
   ];
 
@@ -54,7 +46,7 @@ function DesignInspirationSlider() {
           {items.map((item, index) => (
             <div className="lr-card" key={index}>
               <img src={item.image} alt={item.title} loading="lazy" />
-              <p>{item.title}</p>
+              <p className="text">{item.title}</p>
             </div>
           ))}
         </div>

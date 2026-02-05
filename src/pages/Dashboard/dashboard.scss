@@ -197,10 +197,6 @@ $tablet: 1024px;
    Why Us (Merged)
 ================================ */
 .why-us {
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
-  transform-origin: center; /* scale from center */
-  .text-center { margin-bottom: 1rem; }
-
   /* container hides overflow so the scrolling track can loop seamlessly */
   .why-us-card {
     width: 100%;
@@ -348,23 +344,23 @@ $tablet: 1024px;
 //   transform-origin: center; /* scale from center */
 // }
 
-.how-it-works{
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
-  transform-origin: center; /* scale from center */
-}
+// .how-it-works{
+//   transform: scale(0.9); /* scale down by 30% (70% of original size) */
+//   transform-origin: center; /* scale from center */
+// }
 
-.design-areas-in-dashboard{
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
-  transform-origin: center; /* scale from center */
-}
+// .design-areas-in-dashboard{
+//   transform: scale(0.9); /* scale down by 30% (70% of original size) */
+//   transform-origin: center; /* scale from center */
+// }
 
-.estimation-section {
-  transform: scale(0.9); /* scale down by 30% to align with other sections */
-  transform-origin: center;
-  margin-top: 2%;
-}
+// .estimation-section {
+//   transform: scale(0.9); /* scale down by 30% to align with other sections */
+//   transform-origin: center;
+//   margin-top: 2%;
+// }
 
-.steps{
-  transform: scale(0.9); /* scale down by 30% (70% of original size) */
-  transform-origin: center; /* scale from center */
-}
+// .steps{
+//   transform: scale(0.9); /* scale down by 30% (70% of original size) */
+//   transform-origin: center; /* scale from center */
+// }

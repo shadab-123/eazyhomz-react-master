@@ -18,8 +18,8 @@ import Testimonials from '../../components/Testimonials';
 const Dashboard = () => {
   const { t } = useTranslation();
   const [openFormModal, setOpenFormModal] = useState(false)
-  const cardData = Array.isArray(t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true })) 
-    ? t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true }) 
+  const cardData = Array.isArray(t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true }))
+    ? t('DASHBOARD_DATA.INTERIOR_NEEDS.CARD_SLIDER_DATA', { returnObjects: true })
     : [];
   // WHY US data (duplicate for seamless loop)
   const whyUsData = Array.isArray(t('DASHBOARD_DATA.WHY_US.WHY_US_CARD_DATA', { returnObjects: true }))
@@ -34,11 +34,12 @@ const Dashboard = () => {
   return (
     <Layout>
       <div className="container">
+
         <div className='hero-image'>
           <div className='hero-image-heading'>
             <div className='hero-heading'>
               <h1>Dream</h1>
-              <h1>Design</h1> 
+              <h1>Design</h1>
               <h1>Build</h1>
             </div>
           </div>
@@ -54,102 +55,109 @@ const Dashboard = () => {
               alt="WhatsApp"
             />
           </a>
-          <div className='hero-image-form'>
+          <div className='hero-image-form' style={{ marginTop: '5%' }}>
             <div className='esimation-form'>
               <FormComponent />
             </div>
           </div>
         </div>
-        <div className="estimationContainer">
 
+        <div className="estimationContainer">
           <div className='tab-mobile-view-only text-center'>
             <ButtonComponent className="simple-button" text={"Get Free Estimate"} onClick={handleModalFormOpen} />
           </div>
-          <div className='why-us'>
-            <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
-            <div className='why-us-card' aria-hidden={whyUsData.length === 0 ? "true" : "false"}>
-              <div className='why-us-track'>
-                {whyUsData.map((data, idx) => (
-                  <div className='' key={`${data.id || idx}-${idx}`}>
-                    <WhyUsCard
-                      logoPath={data.logoPath}
-                      text={data.text}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className='interior-needs'>
-            <h1 className='text-center'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.HEADING')}</h1>
-            <p className='text-center sub-text'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.SUB_HEADING')}</p>
-            <div className='card-slider-container'>
-              <CardSlider cardData={cardData} />
-            </div>
-          </div>
+        </div>
 
-          <div className='design-areas-in-dashboard'>
-            <h1 className='text-center'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.HEADING')}</h1>
-            <p className='text-center sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
-            <DesignInspirationSlider />
-          </div>
-
-          <div className='estimation-section'>
-            <h1 className='text-center'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.HEADING')}</h1>
-            <p className='text-center sub-text'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.SUB_HEADING')}</p>
-
-            <Grid sx={{ margin: "1rem" }} container spacing={2}>
-              {
-                t('DASHBOARD_DATA.ESTIMATION_SECTION.ESTIMATION_DATA', { returnObjects: true }).map((data, index) => {
-                  return (
-                    <EstimationCard
-                      key={index}
-                      heading={data.heading}
-                      logoPath={data.logoPath}
-                      text={data.text}
-                      buttonText={data.buttonText}
-                      buttonClickEvent={handleModalFormOpen}
-                    />
-                  )
-                })
-              }
-            </Grid>
-          </div>
-
-          <div className='steps'>
-            <h1 className='text-center steps-heading'>{t('DASHBOARD_DATA.STEPS_SECTION.HEADING')}</h1>
-            <p className='text-center sub-text'>{t('DASHBOARD_DATA.STEPS_SECTION.SUB_HEADING')}</p>
-            <div className='step-cards'>
-              {
-                t('DASHBOARD_DATA.STEPS_SECTION.STEP_CARDS', { returnObjects: true }).map((data, index) => {
-                  return (
-                    <StepCard
-                      key={data.id}
-                      id={data.id}
-                      logoPath={data.image}
-                      heading={data.heading}
-                      subHeading={data.subHeading}
-                    />
-                  )
-                })
-              }
+        <div className='why-us' style={{marginBottom:'20px'}}>
+          <h1 className='text-center'>{t('DASHBOARD_DATA.WHY_US.HEADING')}</h1>
+          <div className='why-us-card' aria-hidden={whyUsData.length === 0 ? "true" : "false"}>
+            <div className='why-us-track'>
+              {whyUsData.map((data, idx) => (
+                <div className='' key={`${data.id || idx}-${idx}`}>
+                  <WhyUsCard
+                    logoPath={data.logoPath}
+                    text={data.text}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <HowItWorks className="how-it-works" onConsultationClick={handleModalFormOpen} />
+        <div className='interior-needs' style={{marginBottom:'10px'}}>
+          <h1 className='text-center'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.HEADING')}</h1>
+          <p className='text-center sub-text'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.SUB_HEADING')}</p>
+          <div className='card-slider-container'>
+            <CardSlider cardData={cardData} />
+          </div>
+        </div>
 
-        <Testimonials />
+        <div className='design-areas-in-dashboard' style={{marginBottom:'40px'}}>
+          <h1 className='text-center'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.HEADING')}</h1>
+          <p className='text-center sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
+          <DesignInspirationSlider />
+        </div>
+
+        <div className='estimation-section'>
+          <h1 className='text-center'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.HEADING')}</h1>
+          <p className='text-center sub-text' style={{ textAlign: 'center' }}>{t('DASHBOARD_DATA.ESTIMATION_SECTION.SUB_HEADING')}</p>
+
+          <Grid sx={{ margin: "1rem" }} container spacing={2}>
+            {
+              t('DASHBOARD_DATA.ESTIMATION_SECTION.ESTIMATION_DATA', { returnObjects: true }).map((data, index) => {
+                return (
+                  <EstimationCard
+                    key={index}
+                    heading={data.heading}
+                    logoPath={data.logoPath}
+                    text={data.text}
+                    buttonText={data.buttonText}
+                    buttonClickEvent={handleModalFormOpen}
+                  />
+                )
+              })
+            }
+          </Grid>
+        </div>
+
+        <div className='steps'>
+          <h1 className='text-center steps-heading'>{t('DASHBOARD_DATA.STEPS_SECTION.HEADING')}</h1>
+          <p className='text-center sub-text'>{t('DASHBOARD_DATA.STEPS_SECTION.SUB_HEADING')}</p>
+          <div className='step-cards'>
+            {
+              t('DASHBOARD_DATA.STEPS_SECTION.STEP_CARDS', { returnObjects: true }).map((data, index) => {
+                return (
+                  <StepCard
+                    key={data.id}
+                    id={data.id}
+                    logoPath={data.image}
+                    heading={data.heading}
+                    subHeading={data.subHeading}
+                  />
+                )
+              })
+            }
+          </div>
+        </div>
+
+        <div className="how-it-works">
+          <HowItWorks onConsultationClick={handleModalFormOpen} />
+        </div>
+
+        <div className="testimonials">
+          <Testimonials />
+        </div>
+        
       </div>
       {
         openFormModal && <DialogModal
           open={openFormModal}
           onClose={handleModalFormClose}
           title={" "}
-          // width={width}
+        // width={width}
         >
           <div className='esimation-form'>
-            <FormComponent/>
+            <FormComponent />
           </div>
         </DialogModal>
       }
