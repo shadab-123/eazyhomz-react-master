@@ -58,28 +58,33 @@
       "WHY_US_CARD_DATA": [
         {
           "id": "1",
-          "logoPath": "/assets/images/globe_icon.png",
+          "logoPath": "/assets/images/Global Presence (1).png",
           "text": "Global Presence"
         },
         {
           "id": "2",
-          "logoPath": "/assets/images/why-us-2.png",
-          "text": "Transparent Price"
+          "logoPath": "/assets/images/deliverable (1).png",
+          "text": "100+ Projects Delivered"
         },
         {
           "id": "3",
-          "logoPath": "/assets/images/why-us-3.png",
+          "logoPath": "/assets/images/Architecture Design (1).png",
           "text": "Personalised Design"
         },
         {
-          "id": "4",
-          "logoPath": "/assets/images/why-us-4.png",
-          "text": "Flat 5 Year Warranty*"
+          "id": "5",
+          "logoPath": "/assets/images/NO HIDDEN COST2 (1).png",
+          "text": "No Hidden Cost"
         },
         {
           "id": "5",
-          "logoPath": "/assets/images/why-us-5.png",
-          "text": "No Hidden Cost"
+          "logoPath": "/assets/images/ON TIME DELIVERY (1).png",
+          "text": "On Time Delivery"
+        },
+        {
+          "id": "6",
+          "logoPath": "/assets/images/proven track record (1).png",
+          "text": "Proven Track Record"
         }
       ]
     },
@@ -92,7 +97,7 @@
     },
     "INTERIOR_NEEDS": {
       "HEADING": "One stop solution for all your home design needs​",
-      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior design or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence — tailored to your lifestyle and aspirations.",
+      "SUB_HEADING": "Your all-in-one destination for exceptional architecture, interior, and landscape design solutions. With our expert team of architects, designers, and craftsmen, we deliver seamless journey from concept to completion. Whether you’re envisioning a modern space, a refined interior design or a transformative outdoor environment, we bring your ideas to life with precision, creativity, and excellence tailored to your lifestyle and aspirations.",
       "CARD_SLIDER_DATA": [
         {
           "IMAGE_PATH": "/assets/images/dashboard/one-stop-solution-1.jpg",
@@ -233,7 +238,7 @@
           "id": "4",
           "heading": "Emodular",
           "logoPath": "/assets/images/interior4.png",
-          "text": "Get an estimate for Furniture Design & Installation work",
+          "text": "Get an estimate for Furniture Design.",
           "buttonText": "Get Free Estimation"
         }
       ]

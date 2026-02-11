@@ -34,7 +34,6 @@ $tablet: 1024px;
   }
 
   .sub-text {
-    color: #7a7a7a;
     line-height: 1.6;
     margin: 1rem;
     text-align: left;
@@ -241,6 +240,7 @@ $tablet: 1024px;
 ================================ */
 .steps {
   background: #fff;
+  margin-top: 4%;
 
   .step-cards {
     display: flex;
