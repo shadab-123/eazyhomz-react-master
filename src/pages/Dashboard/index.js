@@ -34,7 +34,6 @@ const Dashboard = () => {
   return (
     <Layout>
       <div className="container">
-
         <div className='hero-image'>
           <div className='hero-image-heading'>
             <div className='hero-heading'>
@@ -147,7 +146,7 @@ const Dashboard = () => {
         <div className="testimonials">
           <Testimonials />
         </div>
-        
+      test
       </div>
       {
         openFormModal && <DialogModal
