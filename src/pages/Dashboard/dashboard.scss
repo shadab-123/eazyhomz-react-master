@@ -37,14 +37,39 @@ $tablet: 1024px;
     line-height: 1.6;
     margin: 1rem;
     text-align: left;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #666;
 
-    @include respond($mobile) {
-      margin: 1rem 4rem;
-      text-align: justify;
+    // Mobile (≤480px)
+    @media (max-width: 480px) {
+      font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+      margin: 0.75rem 0.5rem;
+      text-align: center;
+      line-height: 1.5;
     }
 
-    @include respond($tablet) {
-      margin: 1rem 5rem;
+    // Tablet (481px - 768px)
+    @media (min-width: 481px) and (max-width: 768px) {
+      font-size: clamp(0.9rem, 2.4vw, 1rem);
+      margin: 0.9rem 1.2rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    // iPad/Small Laptop (769px - 1024px)
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+      margin: 1rem 2rem;
+      text-align: center;
+      line-height: 1.65;
+    }
+
+    // Desktop (1025px and above)
+    @media (min-width: 1025px) {
+      font-size: clamp(1rem, 2.8vw, 1.2rem);
+      margin: 1.2rem 4rem;
+      text-align: justify;
+      line-height: 1.7;
     }
   }
 }
@@ -196,6 +221,13 @@ $tablet: 1024px;
    Why Us (Merged)
 ================================ */
 .why-us {
+  padding: 1.5rem 1rem;
+  
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin: 0 0 1.5rem 0;
+  }
+
   /* container hides overflow so the scrolling track can loop seamlessly */
   .why-us-card {
     width: 100%;
@@ -226,13 +258,95 @@ $tablet: 1024px;
     display: flex;
     flex-direction: column;
   }
-}
 
-/* Keep continuous scroll - do not pause on hover to avoid breaking loop */
+  /* Mobile (≤480px) */
+  @media (max-width: 480px) {
+    padding: 1rem 0.75rem;
+    
+    h1 {
+      font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+      margin: 0 0 1rem 0;
+    }
+    
+    .why-us-card {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .why-us-track {
+      padding: 0.5rem 0;
+      gap: 0.75rem;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .why-us-track > .why-us-card-wrapper {
+      min-width: 120px;
+      max-width: 180px;
+      margin-right: 0.5rem;
+      scroll-snap-align: start;
+    }
+  }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .why-us-card-wrapper { min-width: 140px; max-width: 220px; margin-right: 0.5rem; }
+  /* Tablet (481px - 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 1.2rem 1rem;
+    
+    h1 {
+      font-size: clamp(1.4rem, 4.8vw, 1.8rem);
+      margin: 0 0 1.2rem 0;
+    }
+    
+    .why-us-track {
+      padding: 0.6rem 0;
+    }
+    
+    .why-us-track > .why-us-card-wrapper {
+      min-width: 140px;
+      max-width: 220px;
+      margin-right: 0.75rem;
+    }
+  }
+
+  /* iPad/Small Laptop (769px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 1.5rem 1.5rem;
+    
+    h1 {
+      font-size: clamp(1.8rem, 5.2vw, 2.2rem);
+      margin: 0 0 1.5rem 0;
+    }
+    
+    .why-us-track {
+      padding: 0.8rem 0;
+    }
+    
+    .why-us-track > .why-us-card-wrapper {
+      min-width: 170px;
+      max-width: 260px;
+      margin-right: 1rem;
+    }
+  }
+
+  /* Desktop (1025px and above) */
+  @media (min-width: 1025px) {
+    padding: 2rem 2rem;
+    
+    h1 {
+      font-size: clamp(2rem, 5.5vw, 2.8rem);
+      margin: 0 0 2rem 0;
+    }
+    
+    .why-us-track {
+      padding: 1rem 0;
+    }
+    
+    .why-us-track > .why-us-card-wrapper {
+      min-width: 200px;
+      max-width: 320px;
+      margin-right: 1.5rem;
+    }
+  }
 }
 
 /* ==============================
@@ -302,9 +416,63 @@ $tablet: 1024px;
 .esimation-form{
   background: white;
 }
-.hero-heading{
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  
+  // Mobile (default - portrait phones)
   margin-top: 40%;
-  margin-left: 20%;
+  margin-left: 0;
+  text-align: center;
+  
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.1;
+  }
+
+  // Tablet (landscape phones and small tablets)
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-top: 25%;
+    margin-left: 5%;
+    align-items: flex-start;
+    text-align: left;
+    
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 3.5rem);
+    }
+  }
+
+  // iPad (medium tablets)
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin-top: 30%;
+    margin-left: 8%;
+    align-items: flex-start;
+    text-align: left;
+    
+    h1 {
+      font-size: clamp(3rem, 8vw, 4rem);
+    }
+  }
+
+  // Desktop and larger
+  @media (min-width: 1025px) {
+    margin-top: 40%;
+    margin-left: 20%;
+    align-items: flex-start;
+    text-align: left;
+    
+    h1 {
+      font-size: clamp(3.5rem, 9vw, 5rem);
+    }
+  }
 }
 .home-design-made-easy {
   .text-center {
