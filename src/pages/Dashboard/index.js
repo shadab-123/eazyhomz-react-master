@@ -146,7 +146,6 @@ const Dashboard = () => {
         <div className="testimonials">
           <Testimonials />
         </div>
-      test
       </div>
       {
         openFormModal && <DialogModal

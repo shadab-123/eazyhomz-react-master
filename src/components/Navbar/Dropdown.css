@@ -16,7 +16,7 @@
 
 .menuItem {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 11px;
 }
 
 .dropdown-menu li:hover {
@@ -30,23 +30,23 @@
 
 .dropdown-link {
   display: block;
-  height: 50px !important;
+  height: 35px !important;
   width: 100%;
   border: none !important;
   text-decoration: none;
   color: black !important;
-  padding: 16px;
+  padding: 10px;
   font-weight: normal !important;
-  font-size: 16px !important;
+  font-size: 11px !important;
 }
 .dropdown-link :hover {
   display: block;
-  height: 50px !important;
+  height: 35px !important;
   width: 100%;
   border: none !important;
   text-decoration: none;
   color: orangered !important ;
-  padding: 16px;
+  padding: 10px;
 }
 a :hover{
   color: orangered !important ;
