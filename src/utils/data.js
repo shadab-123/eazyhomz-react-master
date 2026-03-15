@@ -423,7 +423,7 @@ export const FOOTER_DATA = {
     HEADING: "Eazyhomz",
     ADDRESS_DATA: {
         mail: "care@eazyhomz.com",
-        phone1: "+971 563163635",
+        phone1: "+971 553550259",
         phone2: "+91 8376091234",
         address1: "Dubai, UAE",
         address2: "Delhi, India"

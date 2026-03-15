@@ -43,7 +43,7 @@ const Dashboard = () => {
             </div>
           </div>
           <a
-            href="https://wa.me/971563163635"
+            href="https://wa.me/971553550259"
             class="whatsapp-fixed"
             target="_blank"
             rel="noreferrer"
