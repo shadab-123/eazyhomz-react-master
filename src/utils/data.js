@@ -81,13 +81,13 @@ export const NAV_ROUTE_LINK = () => {
 
         },
 
-        {
-            text: t('NAV_ROUTE_LINKS.LANDSCAPE'),
-            to: ROUTES.LANDSCAPE,
-            nestedLinks: [],
-            havingNestedRoute: false,
-            isDisable:false
-        },
+        // {
+        //     text: t('NAV_ROUTE_LINKS.LANDSCAPE'),
+        //     to: ROUTES.LANDSCAPE,
+        //     nestedLinks: [],
+        //     havingNestedRoute: false,
+        //     isDisable:false
+        // },
         // {
         //     text: t('NAV_ROUTE_LINKS.BIM_Solution'),
         //     to: ROUTES.BEDROOM,

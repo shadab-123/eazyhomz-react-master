@@ -1,386 +1,1254 @@
-.architecture {
-  width: 100%;
-  background-color: #f9f9f9;
-  padding-bottom: 2rem;
+// ============================================
+// Modern Architecture Component Styles
+// ============================================
 
-  /* ===== Hero Section ===== */
-  .arch-hero {
-    width: 100%;
-    height: clamp(300px, 60vh, 500px);
-    background: linear-gradient(135deg, #EB5E20 0%, #ff7f3a 100%),
-                url('../../../public/assets/images/EazyHero.jpg') center/cover;
-    background-blend-mode: overlay;
-    background-attachment: fixed;
+// Color Variables
+$primary-color: #2c3e50;
+$accent-color: #e0e0e0;
+$text-dark: #1a1a1a;
+$text-light: #666666;
+$border-light: #f0f0f0;
+$white: #ffffff;
+$shadow-light: rgba(0, 0, 0, 0.08);
+$shadow-medium: rgba(0, 0, 0, 0.15);
+
+// Typography Variables
+$font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// ============================================
+// Base Styles
+// ============================================
+
+.architecture-new {
+  width: 100%;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+.arch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+// ============================================
+// Sticky Navigation
+// ============================================
+
+.arch-sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  transform: translateY(-100%);
+
+  &.active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px $shadow-light;
+  }
+
+  .arch-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem clamp(1rem, 4vw, 2rem);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+  }
+
+  .arch-nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: $font-primary;
+    letter-spacing: 0.5px;
+  }
+
+  .arch-nav-links {
+    display: flex;
+    gap: 2.5rem;
+
+    a {
+      color: $text-light;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $primary-color;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .arch-nav-links {
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .arch-nav-links {
+      gap: 1rem;
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// ============================================
+// Hero Section
+// ============================================
+
+.arch-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #d9d9d9 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(44, 62, 80, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(44, 62, 80, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .arch-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .arch-hero-text {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .arch-hero-title {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 900;
+    color: $primary-color;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+    font-family: $font-primary;
+    letter-spacing: -1px;
+  }
+
+  .arch-hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    color: $text-light;
+    margin: 0 0 2.5rem 0;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .arch-hero-cta {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
+    font-family: $font-primary;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+      background: lighten($primary-color, 5%);
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.875rem 2rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  .arch-hero-visual {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  .arch-hero-shape {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px rgba(255, 255, 255, 0.6);
     position: relative;
     overflow: hidden;
 
-    &-overlay {
-      text-align: center;
-      color: white;
-      z-index: 2;
-      padding: clamp(1rem, 5vw, 3rem);
-      animation: fadeInUp 0.8s ease-out;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://media.licdn.com/dms/image/v2/D5612AQGwAQqVZdc9xg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1691299945372?e=2147483647&v=beta&t=lJWtfCBhvvnAmJNYAdnSOEJTgtrVkv3ZsGQHZabA1hQ');
+      background-size: cover;
+      background-position: center;
+      transform: translateZ(0);
+      border-radius: 20px;
     }
 
-    &-title {
-      font-size: clamp(2rem, 8vw, 4rem);
-      font-weight: 900;
-      font-family: "Poppins", sans-serif;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-      letter-spacing: 1px;
-      margin-top: 1rem;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
+      border-radius: 20px;
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// ============================================
+// About Section
+// ============================================
+
+.arch-about {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: white;
+
+  .arch-about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .arch-about-text {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .arch-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: $primary-color;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    font-family: $font-primary;
+  }
+
+  .arch-section-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: $text-light;
+    margin: 0 0 2.5rem 0;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .arch-philosophy-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .arch-point {
+    padding: 1.5rem;
+    border-left: 4px solid $primary-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateX(8px);
     }
 
-    &-subtitle {
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      font-weight: 300;
-      opacity: 0.95;
+    .arch-point-icon {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin: 0 0 0.5rem 0;
+      font-family: $font-primary;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: $text-light;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .arch-about-visual {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .arch-about-box {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px $shadow-medium;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://www.abirpothi.com/wp-content/uploads/2024/01/Philosophy-and-Architecture-.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.96;
+      transform: scale(1.02);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(44,62,80,0.14));
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// Services Section
+// ============================================
+
+.arch-services {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+
+  .arch-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: $primary-color;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    font-family: $font-primary;
+  }
+
+  .arch-section-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: $text-light;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-weight: 400;
+  }
+
+  .arch-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+.arch-service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px $shadow-light;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(44, 62, 80, 0.15);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .arch-service-line {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    border: 2px solid $primary-color;
+    box-shadow: 0 12px 32px rgba(44, 62, 80, 0.15);
+  }
+
+  .arch-service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: bounce 0.6s ease-out;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 1rem 0;
+    font-family: $font-primary;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-light;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .arch-service-line {
+    height: 3px;
+    background: $primary-color;
+    width: 0;
+    margin: 1.5rem auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+// ============================================
+ // Portfolio Section
+// ============================================
+
+.arch-portfolio {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: white;
+
+  .arch-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: $primary-color;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    font-family: $font-primary;
+  }
+
+  .arch-section-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: $text-light;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-weight: 400;
+  }
+
+  .arch-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .arch-project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.08);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(44, 62, 80, 0.15);
+    }
+
+    &.active {
+      border: 2px solid $primary-color;
+      box-shadow: 0 20px 60px rgba(44, 62, 80, 0.2);
+    }
+  }
+
+  .arch-project-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .arch-project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(44, 62, 80, 0.4) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .arch-project-card:hover & {
+      opacity: 1;
+    }
+
+    .arch-project-category {
+      background: rgba(255, 255, 255, 0.9);
+      color: $primary-color;
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
       letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.3;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  .arch-project-content {
+    padding: 1.5rem;
+
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.3;
+    }
+
+    p {
+      color: $text-light;
+      font-size: 0.9rem;
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+    }
+
+    .arch-project-view-btn {
+      background: $primary-color;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: lighten($primary-color, 10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .arch-project-details {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .arch-project-details-card {
+    max-width: 800px;
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(44, 62, 80, 0.12);
+    position: relative;
+
+    .arch-project-category {
+      background: $primary-color;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
       margin-bottom: 1rem;
     }
 
-    &-btn {
-      background-color: #ffffff;
-      color: #EB5E20;
-      border: none;
-      padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      
-      &:hover {
-        background-color: #f0f0f0;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    h3 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: $primary-color;
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+
+    p {
+      color: $text-light;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 1.5rem 0;
+
+      &:last-of-type {
+        margin-bottom: 2rem;
       }
     }
 
-    @media (max-width: 480px) {
-      height: clamp(250px, 50vh, 400px);
-      
-      &-overlay {
-        padding: 1.5rem;
+    .arch-project-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: 2px solid $border-light;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: $text-light;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+        transform: rotate(90deg);
       }
     }
   }
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 18px 70px rgba(44, 62, 80, 0.1);
+    border: 1px solid rgba(44, 62, 80, 0.08);
+  }
 
-  /* ===== Introduction Section ===== */
-  .arch-intro {
-    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
-    background-color: white;
+  .arch-project-details-card .arch-project-category {
+    display: inline-block;
+    background: rgba(44, 62, 80, 0.08);
+    color: $primary-color;
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
 
-    &-container {
-      max-width: 900px;
-      margin: 0 auto;
+  .arch-project-details-card h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 1rem 0;
+    color: $primary-color;
+  }
+
+  .arch-project-details-card p {
+    color: $text-light;
+    line-height: 1.8;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+
+  .arch-project-close {
+    margin-top: 1rem;
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    border: none;
+    background: $primary-color;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .arch-project-close:hover {
+    background: lighten($primary-color, 5%);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    .arch-portfolio-globe {
+      min-height: 640px;
     }
+
+    .arch-globe-node {
+      width: 105px;
+      min-height: 130px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .arch-portfolio-globe {
+      min-height: 560px;
+    }
+
+    .arch-globe-node {
+      width: 95px;
+      min-height: 125px;
+      padding: 0.7rem;
+    }
+
+    .arch-project-details-card {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .arch-portfolio-globe {
+      min-height: 520px;
+      width: 100%;
+      padding: 2rem 0;
+    }
+
+    .arch-globe-node {
+      width: 90px;
+      min-height: 118px;
+      padding: 0.65rem;
+    }
+
+    .arch-globe-core {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .arch-project-details {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .arch-project-details-card {
+    max-width: 760px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 18px 70px rgba(44, 62, 80, 0.1);
+    border: 1px solid rgba(44, 62, 80, 0.08);
+  }
+
+  .arch-project-details-card .arch-project-category {
+    display: inline-block;
+    background: rgba(44, 62, 80, 0.08);
+    color: $primary-color;
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .arch-project-details-card h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 1rem 0;
+    color: $primary-color;
+  }
+
+  .arch-project-details-card p {
+    color: $text-light;
+    line-height: 1.8;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+
+  .arch-project-close {
+    margin-top: 1rem;
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    border: none;
+    background: $primary-color;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .arch-project-close:hover {
+    background: lighten($primary-color, 5%);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .arch-portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .arch-project-details-card {
+      padding: 2rem;
+    }
+
+    .arch-project-image {
+      height: 200px;
+    }
+
+    .arch-project-overlay {
+      padding: 1.2rem;
+    }
+
+    .arch-project-overlay h3 {
+      font-size: 1.1rem;
+    }
+
+    .arch-project-content {
+      padding: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .arch-portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .arch-project-card {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    .arch-project-details-card {
+      padding: 1.5rem;
+      margin: 0 1rem;
+    }
+
+    .arch-project-details-card h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+
+
+// ============================================
+// Testimonials Section
+// ============================================
+
+.arch-testimonials {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+
+  .arch-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: $primary-color;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    font-family: $font-primary;
+  }
+
+  .arch-section-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: $text-light;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-weight: 400;
+  }
+
+  .arch-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 
     @media (max-width: 768px) {
-      padding: 1.5rem 1rem;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.arch-testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px $shadow-light;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px $shadow-medium;
+  }
+
+  .arch-testimonial-rating {
+    font-size: 1.2rem;
+    color: #f0b000;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .arch-testimonial-text {
+    font-size: 1rem;
+    color: $text-light;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+  }
+
+  .arch-testimonial-author {
+    border-top: 1px solid $border-light;
+    padding-top: 1rem;
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin: 0 0 0.25rem 0;
+      font-family: $font-primary;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: $text-light;
+      margin: 0;
+    }
+  }
+}
+
+// ============================================
+// CTA Section
+// ============================================
+
+.arch-cta {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+  text-align: center;
+
+  .arch-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: white;
+      margin: 0 0 1rem 0;
+      line-height: 1.3;
+      font-family: $font-primary;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 2rem 0;
+      line-height: 1.6;
+      font-weight: 300;
     }
   }
 
-  /* ===== Section Headings ===== */
-  .arch-section-heading {
-    font-size: clamp(1.5rem, 5vw, 2.8rem);
-    font-weight: 900;
-    font-family: "Poppins", sans-serif;
-    color: #333333;
-    text-align: center;
-    margin: 0 0 1.5rem 0;
+  .arch-cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: white;
+    color: $primary-color;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-family: $font-primary;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.5px;
 
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      background: #f5f5f5;
+    }
+
     @media (max-width: 480px) {
-      margin: 0 0 1rem 0;
+      padding: 0.875rem 2rem;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// ============================================
+// Contact Modal
+// ============================================
+
+.arch-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.arch-modal {
+  background: white;
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 3rem);
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: $primary-color;
+    margin: 0 0 1.5rem 0;
+    font-family: $font-primary;
+  }
+
+  .arch-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $text-light;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
     }
   }
 
-  .arch-section-description {
-    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-    color: #666666;
-    line-height: 1.8;
-    text-align: justify;
-    margin: 1rem 0;
-    font-weight: 400;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      margin: 0.8rem 0;
-    }
-  }
-
-  /* ===== Features Section ===== */
-  .arch-features {
-    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
-    background-color: #f9f9f9;
-
-    &-grid {
-      margin-top: 3rem;
-
-      @media (max-width: 768px) {
-        margin-top: 2rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      padding: 1.5rem 1rem;
-    }
-  }
-
-  .arch-feature-item {
-    perspective: 1000px;
-  }
-
-  .arch-feature-card {
-    background: white;
-    border-radius: 12px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    height: 100%;
+  .arch-contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
-    &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(235, 94, 32, 0.15);
-    }
-  }
+    input,
+    textarea {
+      padding: 0.875rem 1rem;
+      border: 1px solid $border-light;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: $font-secondary;
+      transition: all 0.3s ease;
 
-  .arch-feature-icon {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    line-height: 1;
-  }
-
-  .arch-feature-title {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 700;
-    color: #333333;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .arch-feature-description {
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    color: #666666;
-    line-height: 1.6;
-    margin: 0;
-    flex-grow: 1;
-  }
-
-  /* ===== Process Section ===== */
-  .arch-process {
-    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
-    background-color: white;
-
-    &-subtitle {
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-      text-align: center;
-      color: #666666;
-      margin: 1rem 0 2.5rem 0;
-      font-weight: 400;
-
-      @media (max-width: 480px) {
-        margin: 0.8rem 0 1.5rem 0;
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
       }
     }
 
-    &-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      @media (max-width: 480px) {
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      padding: 1.5rem 1rem;
-    }
-  }
-
-  .arch-process-card {
-    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-    border: 2px solid #f0f0f0;
-    border-radius: 12px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-
-    &:hover {
-      border-color: #EB5E20;
-      box-shadow: 0 6px 16px rgba(235, 94, 32, 0.12);
-      transform: translateY(-4px);
-    }
-  }
-
-  .arch-process-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: clamp(3rem, 6vw, 3.5rem);
-    height: clamp(3rem, 6vw, 3.5rem);
-    background: linear-gradient(135deg, #EB5E20 0%, #ff7f3a 100%);
-    color: white;
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
-    font-weight: 900;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .arch-process-title {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 700;
-    color: #333333;
-    margin: 0 0 0.8rem 0;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .arch-process-description {
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    color: #666666;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* ===== Why Us Section ===== */
-  .arch-why-us {
-    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
-    background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
-
-    &-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    &-grid {
-      margin-top: 2.5rem;
-
-      @media (max-width: 768px) {
-        margin-top: 1.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      padding: 1.5rem 1rem;
-    }
-  }
-
-  .arch-why-us-item {
-    background: white;
-    border-radius: 12px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-
-    &:hover {
-      box-shadow: 0 6px 16px rgba(235, 94, 32, 0.12);
-      transform: translateY(-4px);
-    }
-  }
-
-  .arch-why-us-title {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    font-weight: 700;
-    color: #EB5E20;
-    margin: 0 0 0.8rem 0;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .arch-why-us-text {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    color: #666666;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* ===== CTA Section ===== */
-  .arch-cta {
-    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
-    background: linear-gradient(135deg, #EB5E20 0%, #ff7f3a 100%);
-    text-align: center;
-    color: white;
-
-    &-heading {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 900;
-      margin: 0 0 1rem 0;
-      font-family: "Poppins", sans-serif;
-      letter-spacing: 0.5px;
-    }
-
-    &-subtitle {
-      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
-      margin: 0 0 2rem 0;
-      opacity: 0.95;
-      font-weight: 300;
-    }
-
-    &-btn {
-      background-color: white;
-      color: #EB5E20;
+    .arch-form-submit {
+      padding: 1rem;
+      background: $primary-color;
+      color: white;
       border: none;
-      padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      font-weight: 700;
-      border-radius: 50px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      
+      font-family: $font-primary;
+      margin-top: 0.5rem;
+
       &:hover {
-        background-color: #f0f0f0;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        background: lighten($primary-color, 5%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
       }
     }
+  }
+}
 
-    @media (max-width: 768px) {
-      padding: 2rem 1rem;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ============================================
+// Responsive Design
+// ============================================
+
+@media (max-width: 1024px) {
+  .arch-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .arch-section-title {
+    font-size: 1.8rem !important;
+  }
+
+  .arch-services-grid,
+  .arch-portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .arch-container {
+    padding: 0 1rem;
+  }
+
+  .arch-hero {
+    padding: 2rem 1rem;
+
+    .arch-hero-content {
+      gap: 1.5rem;
     }
   }
 
-  /* ===== Mobile Animations ===== */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* ===== Responsive Adjustments ===== */
-  @media (max-width: 480px) {
-    .arch-section-heading {
-      margin-bottom: 1rem;
-    }
-
-    .arch-section-description {
-      font-size: 0.9rem;
-    }
-
-    .arch-process-number {
-      width: 2.8rem;
-      height: 2.8rem;
-    }
+  .arch-about,
+  .arch-services,
+  .arch-portfolio,
+  .arch-testimonials,
+  .arch-cta {
+    padding: 2rem 0;
   }
 }

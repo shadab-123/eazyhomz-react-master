@@ -8,6 +8,8 @@
     "@emotion/styled": "11.11.5",
     "@mui/icons-material": "5.15.15",
     "@mui/material": "5.15.15",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.16.8",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "13.5.0",
@@ -26,6 +28,7 @@
     "sass": "1.75.0",
     "serve": "14.2.3",
     "slick-carousel": "1.8.1",
+    "three": "^0.183.2",
     "web-vitals": "2.1.4"
   },
   "scripts": {
