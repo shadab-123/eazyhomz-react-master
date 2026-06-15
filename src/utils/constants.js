@@ -10,7 +10,9 @@ export const ROUTES = {
   KITCHEN: '/kitchen',
   BEDROOM: '/bedroom',
   BATHROOM: '/bathroom',
+  INTERIOR: '/interior',
   FURNITURE_BY_EASYHOMEZ: '/furniture_by_easyhomez',
+  E_MODULAR: '/e_modular',
   BEDROOM_DETAILS: '/bedroom_details',
   KITCHEN_DETAILS: '/kitchen_details',
   BATHROOM_DETAILS: '/bathroom_details',
@@ -24,6 +26,7 @@ export const ROUTES = {
   LANDSCAPE: '/landscape',
   CONTACT_US: '/contact_us',
   BLOG: '/blog',
+  NOT_FOUND: '*',
 };
 
 export const CATEGORY_LIST = [

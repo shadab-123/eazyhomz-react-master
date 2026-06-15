@@ -25,6 +25,7 @@ const Navbar = () => {
   const [openSidebarIndex, setOpenSidebarIndex] = useState(null);
   const [nestedLinks, setNestedLinks] = useState([]);
   const [openFormModal, setOpenFormModal] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const { i18n } = useTranslation();
   const [lang, setLang] = useState(localStorage.getItem("lang") || "en");
@@ -63,6 +64,12 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         closeSidebar();
@@ -78,7 +85,7 @@ const Navbar = () => {
   return (
     <>
       {/* ================= TOP NAV ================= */}
-      <div className={style.container}>
+      <div className={`${style.container} ${scrolled ? style.scrolled : ''}`}>
         {/* LOGO */}
         <div className={style.logo}>
           <Link to="/">

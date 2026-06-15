@@ -38,11 +38,11 @@ $font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .arch-sticky-nav {
   position: fixed;
-  top: 0;
+  top: 3.6rem;
   left: 0;
   right: 0;
   background: transparent;
-  z-index: 1000;
+  z-index: 50;
   transition: all 0.4s ease;
   transform: translateY(-100%);
 
@@ -232,7 +232,7 @@ $font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('https://media.licdn.com/dms/image/v2/D5612AQGwAQqVZdc9xg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1691299945372?e=2147483647&v=beta&t=lJWtfCBhvvnAmJNYAdnSOEJTgtrVkv3ZsGQHZabA1hQ');
+      background-image: url('../../../public/assets/images/dashboard-hero-image.jpg');
       background-size: cover;
       background-position: center;
       transform: translateZ(0);
@@ -368,7 +368,7 @@ $font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('https://www.abirpothi.com/wp-content/uploads/2024/01/Philosophy-and-Architecture-.jpg');
+      background-image: url('../../../public/assets/images/living%20room/Living%20Room%20Design%207.jpg');
       background-size: cover;
       background-position: center;
       opacity: 0.96;

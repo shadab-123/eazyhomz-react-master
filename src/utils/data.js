@@ -27,58 +27,9 @@ export const NAV_ROUTE_LINK = () => {
         {
             text: t('NAV_ROUTE_LINKS.INTERIOR'),
             to: ROUTES.INTERIOR,
-            nestedLinks: [
-                {
-                    text: t('NAV_ROUTE_LINKS.FULL_HOME_INTERIOR'),
-                    to: ROUTES.KITCHEN,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                {
-                    text: t('NAV_ROUTE_LINKS.BEDROOM_IDEAS'),
-                    to: ROUTES.BEDROOM,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                {
-                    text: t('NAV_ROUTE_LINKS.KITCHEN_IDEAS'),
-                    to: ROUTES.KITCHEN,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                {
-                    text: t('NAV_ROUTE_LINKS.BATHROOM_IDEAS'),
-                    to: ROUTES.BATHROOM,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                {
-                    text: t('NAV_ROUTE_LINKS.KIDS_ROOM_DESIGN'),
-                    to: ROUTES.KIDS_ROOM,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                {
-                    text: t('NAV_ROUTE_LINKS.STUDY_ROOM_DESIGN'),
-                    to: ROUTES.STUDY_ROOM,
-                    nestedLinks: [],
-                    havingNestedRoute: false
-                },
-                // {
-                //     text: t('NAV_ROUTE_LINKS.TV_UNIT_DESIGN'),
-                //     to: ROUTES.TV_UNIT,
-                //     nestedLinks: [],
-                //     havingNestedRoute: false
-                // },
-                // {
-                //     text: t('NAV_ROUTE_LINKS.WARDROBE_DESIGN'),
-                //     to: ROUTES.WARDROBE,
-                //     nestedLinks: [],
-                //     havingNestedRoute: false
-                // }
-            ],
-            havingNestedRoute: true
-
+            nestedLinks: [],
+            havingNestedRoute: false,
+            isDisable: false
         },
 
         // {
