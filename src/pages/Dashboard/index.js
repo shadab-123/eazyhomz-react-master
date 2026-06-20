@@ -85,7 +85,7 @@ const Dashboard = () => {
 
         <div className='interior-needs' style={{marginBottom:'10px'}}>
           <h1 className='text-center'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.HEADING')}</h1>
-          <p className='text-center sub-text'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.SUB_HEADING')}</p>
+          <p className='sub-text'>{t('DASHBOARD_DATA.INTERIOR_NEEDS.SUB_HEADING')}</p>
           <div className='card-slider-container'>
             <CardSlider cardData={cardData} />
           </div>
@@ -93,13 +93,13 @@ const Dashboard = () => {
 
         <div className='design-areas-in-dashboard' style={{marginBottom:'40px'}}>
           <h1 className='text-center'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.HEADING')}</h1>
-          <p className='text-center sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
+          <p className='sub-text'>{t('DASHBOARD_DATA.DESIGN_INSPIRATION.SUB_HEADING')}</p>
           <DesignInspirationSlider />
         </div>
 
         <div className='estimation-section'>
           <h1 className='text-center'>{t('DASHBOARD_DATA.ESTIMATION_SECTION.HEADING')}</h1>
-          <p className='text-center sub-text' style={{ textAlign: 'center' }}>{t('DASHBOARD_DATA.ESTIMATION_SECTION.SUB_HEADING')}</p>
+          <p className='sub-text' style={{ textAlign: 'center' }}>{t('DASHBOARD_DATA.ESTIMATION_SECTION.SUB_HEADING')}</p>
 
           <Grid sx={{ margin: "1rem" }} container spacing={2}>
             {
@@ -121,7 +121,7 @@ const Dashboard = () => {
 
         <div className='steps'>
           <h1 className='text-center steps-heading'>{t('DASHBOARD_DATA.STEPS_SECTION.HEADING')}</h1>
-          <p className='text-center sub-text'>{t('DASHBOARD_DATA.STEPS_SECTION.SUB_HEADING')}</p>
+          <p className='sub-text'>{t('DASHBOARD_DATA.STEPS_SECTION.SUB_HEADING')}</p>
           <div className='step-cards'>
             {
               t('DASHBOARD_DATA.STEPS_SECTION.STEP_CARDS', { returnObjects: true }).map((data, index) => {

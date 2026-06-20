@@ -23,6 +23,7 @@ export const ROUTES = {
   WARDROBE_DETAILS: '/wardrobe_details',
   WARDROBE: '/wardrobe',
   ARCHITECTURE: '/architecture',
+  ARCHITECTURE_PROJECTS: '/architecture/projects',
   LANDSCAPE: '/landscape',
   CONTACT_US: '/contact_us',
   BLOG: '/blog',

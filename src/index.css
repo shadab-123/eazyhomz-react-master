@@ -24,6 +24,9 @@ body {
 .text-center{
   text-align: center;
 }
+p, .sub-text, .description, .subtitle {
+  text-align: justify;
+}
 /* Hide scrollbar in Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
   width: 8px;

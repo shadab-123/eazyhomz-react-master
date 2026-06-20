@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"d:\\\\User\\\\Desktop\\\\ezyhmz\\\\eazyhomz-react-master\\\\public\\\\assets\\\\\")",
+      "PowerShell(Head-Object -n 20)",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\User\\\\Desktop\\\\ezyhmz\\\\eazyhomz-react-master\\\\src\\\\pages\\\\ArchitectureProjects\")"
+    ]
+  }
+}

@@ -23,6 +23,7 @@ const InteriorDesign = React.lazy(() => import('../pages/InteriorDesign'));
 const FurnitureByEasyHomez = React.lazy(() => import('../pages/FurnitureByEasyHomez'));
 const EModular = React.lazy(() => import('../pages/EModular'));
 const Architecture = React.lazy(() => import('../pages/Architecture'));
+const ArchitectureProjects = React.lazy(() => import('../pages/ArchitectureProjects'));
 const Landscape = React.lazy(() => import('../pages/Landscape'));
 const ContactUs = React.lazy(() => import('../pages/ContactUs'));
 const Blog = React.lazy(() => import('../pages/Blog'));
@@ -120,6 +121,11 @@ export const appRoutes = {
       path: ROUTES.ARCHITECTURE,
       exact: true,
       element: <Architecture />,
+    },
+    {
+      path: ROUTES.ARCHITECTURE_PROJECTS,
+      exact: true,
+      element: <ArchitectureProjects />,
     },
     {
       path: ROUTES.LANDSCAPE,

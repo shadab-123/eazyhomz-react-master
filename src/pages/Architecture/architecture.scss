@@ -189,28 +189,46 @@ $font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .arch-hero-cta {
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    background: $primary-color;
-    color: white;
+    padding: 0.85rem 2.2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #c8972a 0%, #e8b84b 50%, #c8972a 100%);
+    background-size: 200% auto;
+    color: #1a1a1a;
     border: none;
-    border-radius: 50px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
+    transition: background-position 0.4s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 18px rgba(200, 151, 42, 0.45);
     font-family: $font-primary;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-right: 14px;
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
-      background: lighten($primary-color, 5%);
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200, 151, 42, 0.6);
+    }
+
+    &--outline {
+      background: linear-gradient(135deg, #c8972a 0%, #e8b84b 50%, #c8972a 100%);
+      background-size: 200% auto;
+      color: #1a1a1a;
+      box-shadow: 0 4px 18px rgba(200, 151, 42, 0.45);
+      margin-right: 0;
+
+      &:hover {
+        background-position: right center;
+        box-shadow: 0 8px 28px rgba(200, 151, 42, 0.6);
+      }
     }
 
     @media (max-width: 480px) {
-      padding: 0.875rem 2rem;
-      font-size: 0.95rem;
+      padding: 0.8rem 1.6rem;
+      font-size: 0.85rem;
+      margin-right: 0;
+      margin-bottom: 12px;
     }
   }
 
