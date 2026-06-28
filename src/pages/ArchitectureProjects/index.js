@@ -45,51 +45,46 @@ const projects = [
       '/assets/3. Casa Terra Nova/5.jpg',
     ],
   },
-  // {
-  //   id: 4,
-  //   name: 'Contemporary Bathroom',
-  //   category: 'Interior',
-  //   description: 'Spa-inspired bathroom spaces crafted for comfort, hygiene, and visual sophistication.',
-  //   thumbnail: '/assets/images/bathroom/Bathroom Design 1.jpg',
-  //   images: [
-  //     '/assets/images/bathroom/Bathroom Design 1.jpg',
-  //     '/assets/images/bathroom/Bathroom Design 2.jpg',
-  //     '/assets/images/bathroom/Bathroom Design 3.jpg',
-  //     '/assets/images/bathroom/Bathroom Design 4.jpg',
-  //     '/assets/images/bathroom/Bathroom Design 5.jpg',
-  //     '/assets/images/bathroom/Bathroom Design 6.jpg',
-  //   ],
-  // },
-  // {
-  //   id: 5,
-  //   name: 'Living Room Elegance',
-  //   category: 'Interior',
-  //   description: 'Open and inviting living spaces designed to foster connection and showcase refined taste.',
-  //   thumbnail: '/assets/images/living room/Living Room Design 1.jpg',
-  //   images: [
-  //     '/assets/images/living room/Living Room Design 1.jpg',
-  //     '/assets/images/living room/Living Room Design 10.jpg',
-  //     '/assets/images/living room/Living Room Design 11.jpg',
-  //     '/assets/images/living room/Living Room Design 12.jpg',
-  //     '/assets/images/living room/Living Room Design 121.jpg',
-  //     '/assets/images/living room/Living Room Design 122.jpg',
-  //   ],
-  // },
-  // {
-  //   id: 6,
-  //   name: 'Study Room & Office',
-  //   category: 'Interior',
-  //   description: 'Productive and inspiring study environments designed for focus, clarity, and creative thinking.',
-  //   thumbnail: '/assets/images/study room/Study Room Design 1.jpg',
-  //   images: [
-  //     '/assets/images/study room/Study Room Design 1.jpg',
-  //     '/assets/images/study room/Study Room Design 2.jpg',
-  //     '/assets/images/study room/Study Room Design 3.jpg',
-  //     '/assets/images/study room/Study Room Design 4.jpg',
-  //     '/assets/images/study room/Study Room Design 5.jpg',
-  //     '/assets/images/study room/Study Room Design 6.jpg',
-  //   ],
-  // }
+  {
+    id: 4,
+    name: 'Zambia',
+    category: 'Lusaka Luxe Villa',
+    description: 'An elegant contemporary villa crafted on an 800 sq.m plot, seamlessly blending modern architecture with tranquil landscape living. Designed to elevate everyday experiences through refined spaces, natural light, and timeless sophistication.',
+    thumbnail: '/assets/4. Lusaka Luxe Villa/1.jpg',
+    images: [
+      '/assets/4. Lusaka Luxe Villa/1.jpg',
+      '/assets/4. Lusaka Luxe Villa/2.jpg',
+      '/assets/4. Lusaka Luxe Villa/3.jpg',
+      '/assets/4. Lusaka Luxe Villa/4.jpg'
+    ],
+  },
+  {
+    id: 5,
+    name: 'Al Ain, UAE, (1,500 Sq.M)',
+    category: 'Qasr Al Ain',
+    description: 'A landmark luxury residence crafted on a 1,500 sq.m estate in Al Ain, where contemporary architecture meets refined Arabian elegance. Expansive living spaces, premium materials, and seamless indoor-outdoor experiences create a timeless sanctuary of sophistication.',
+    thumbnail: '/assets/5. Qasr Al Ain/1.jpg',
+    images: [
+      '/assets/5. Qasr Al Ain/1.jpg',
+      '/assets/5. Qasr Al Ain/2.jpg',
+      '/assets/5. Qasr Al Ain/3.jpg',
+      '/assets/5. Qasr Al Ain/4.jpg'
+    ],
+  },
+  {
+    id: 6,
+    name: 'Qatar, (1,200 Sq.M)',
+    category: 'Qasr Al Thuraya',
+    description: 'A distinguished luxury residence designed on a 1,200 sq.m plot, combining contemporary architecture with refined Arabian elegance. Expansive living spaces, sculptural forms, and meticulously crafted landscapes create a timeless expression of prestige and sophistication.',
+    thumbnail: '/assets/6. Qasr Al Thuraya/1.jpg',
+    images: [
+      '/assets/6. Qasr Al Thuraya/1.jpg',
+      '/assets/6. Qasr Al Thuraya/2.jpg',
+      '/assets/6. Qasr Al Thuraya/3.jpg',
+      '/assets/6. Qasr Al Thuraya/4.jpg',
+      '/assets/6. Qasr Al Thuraya/5.jpg'
+    ],
+  }
 ]
 
 const ExpandableDesc = ({ text }) => {
